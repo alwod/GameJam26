@@ -13,6 +13,7 @@ texture = ExtResource("1_62w18")
 
 [node name="PlayerCharacter" parent="." unique_id=1311250608 instance=ExtResource("2_8a836")]
 position = Vector2(587, 283)
+SPEED = 150.0
 
 [node name="TestWall" parent="." unique_id=1440774293 instance=ExtResource("3_j8job")]
 position = Vector2(579, 358)
