@@ -1,11 +1,19 @@
 extends CharacterBody2D
 
 @export var speed : float = 300.0
+var is_talking : bool = false
 
 func _process(delta: float) -> void:
-	pass
+	if DialogueManager.dialogue_started:
+		is_talking = true
+	if DialogueManager.dialogue_ended:
+		is_talking = false
 
 func _physics_process(delta: float) -> void:
+	# Don't move the character during dialogue
+	if is_talking:
+		return
+	
 	#Move player up or down
 	var vert_direction := Input.get_axis("Up","Down")
 	if vert_direction:
