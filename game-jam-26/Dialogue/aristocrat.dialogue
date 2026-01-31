@@ -1,12 +1,13 @@
 ~ start
 set GameState.is_talking = true
 if GameState.current_mask == GameState.Masks.DEFAULT || GameState.current_mask == GameState.Masks.DIPLOMAT:
+	set GameState.current_mask = GameState.Masks.GUARD
 	=> bad_mask
-elif GameState.current_mask != GameState.Masks.COURTESAN || GameState.current_mask != GameState.Masks.ARISTROCRAT:
-	=> ok_mask
-else:
+elif GameState.current_mask == GameState.Masks.COURTESAN || GameState.current_mask == GameState.Masks.ARISTROCRAT:
 	=> good_mask
-
+else:
+	set GameState.current_mask = GameState.Masks.COURTESAN
+	=> ok_mask
 
 ~ end_chat
 set GameState.is_talking = false
@@ -68,5 +69,27 @@ Earnest Wubben-Arlington XI: Well, hello there! Join us! We were just talking ab
 		=> iq_good_2a
 	- They’re not worth talking about.
 		Earnest Wubben-Arlington XI: True enough.
-
+		=> iq_good
+- It’s just staff, like the rest of them.
+	Earnest Wubben-Arlington XI: Staff. Don’t talk to be about staff. They’re all concerned with their own pitiful lives more than serving their betters. Listen to how they talk – as if they’re above the low station that birthed them. They’ll do anything to get ahead; I tell you now.
+	=> iq_good
+- I’m more concerned about that man alone over there. Do you know who he is?
+	Earnest Wubben-Arlington XI: No. He makes me uneasy. I was told he arrived this morning with an invitation. Forged, to be sure. The guards better keep an eye on him.
+	=> iq_good
+- Not as bad as that Jester.
+	Earnest Wubben-Arlington XI: Ugh. Ugh. That charlatan is the worst of them. He acts the fool to hide what a pathetic little worm he is. The King favours him, and I swear that dulls his mind. It can’t do the sane and well any good to be exposed to such a moronic specimen. It’d be better for the whole nation if he just disappeared.
+	- You'd kill the jester?
+		Earnest Wubben-Arlington XI: And why not? Nobody would miss the swine. I only regret that I’d get his putrid blood on my exquisite outfit. He’s not worth the cleaning bill.
+		=> iq_good
+	- Fuck you, you inbred horsefucker!
+		Earnest Wubben-Arlington XI: You insolent, fraudulent pig! Give me back that mask and get out of my sight! I hope the King finally sees what a treacherous little wretch you are after this insult!
+		set GameState.current_mask = GameState.Masks.DEFAULT
+		=> end_chat
+- The guards seem on edge tonight.
+	Earnest Wubben-Arlington XI: The murmurings are that the masquerade has been breached. Be careful of masks that are not our own, my friend. A blade could strike from any corner. Perhaps even the guards’ own number has been breached.
+	=> iq_good
+- Goodbye
+	Earnest Wubben-Arlington XI: 
+		Don’t stray too far, my friend. The air feels off tonight. Tensions are high, and not just with those filthy foreign freaks.
+		
 => end_chat
