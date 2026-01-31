@@ -38,5 +38,7 @@ King: Oh. Well in that case, carry on.
 set GameState.intro_resume_music
 You: That man was murdered while wearing my mask. What if the true target was meant to be me? The killer would know now that he's failed...
 You: I must look into this before they strike again. After all, I am the most competent fool at this ball.
+You: I may not have much time...
+set GameState.start_game = true
 set GameState.is_talking = false
 => END

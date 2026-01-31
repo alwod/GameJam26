@@ -7,10 +7,10 @@
 
 [node name="Clock" type="Node2D" unique_id=741243204]
 script = ExtResource("1_3sgw5")
+starting_time = 10.0
 
 [node name="Timer" type="Timer" parent="." unique_id=545136534]
 wait_time = 10.0
-autostart = true
 
 [node name="ClockFace" type="Sprite2D" parent="." unique_id=1254519464]
 texture = ExtResource("2_7yix1")
@@ -25,3 +25,5 @@ position = Vector2(-0.505, -62.965)
 [node name="ClockHand" type="Sprite2D" parent="HandAnchor" unique_id=1457985700]
 position = Vector2(0, -6.52)
 texture = ExtResource("3_7yix1")
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

@@ -23,6 +23,8 @@ var intro_lights_out : bool = false
 var intro_lights_on : bool = false
 var intro_resume_music : bool = false
 
+var start_game : bool = false
+
 var event_accuse : bool = false
 var event_game_over : bool = false
 var event_game_win : bool = false
