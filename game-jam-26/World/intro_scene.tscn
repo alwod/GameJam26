@@ -41,7 +41,7 @@ scale = Vector2(1.485, 18.19)
 position = Vector2(-101, -2)
 
 [node name="Victim" parent="." unique_id=41319422 instance=ExtResource("5_4g07b")]
-position = Vector2(130, -5)
+position = Vector2(-7, -3)
 npc_name = "Victim"
 sprite = ExtResource("6_csqqw")
 dialogue = ExtResource("7_qofjf")

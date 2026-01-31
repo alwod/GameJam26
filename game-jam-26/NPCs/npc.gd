@@ -17,7 +17,7 @@ func _ready() -> void:
 	
 
 func _process(delta: float) -> void:
-	if Input.is_action_pressed("Interact") && can_talk:
+	if Input.is_action_pressed("Interact") && can_talk && npc_name != "Victim":
 		can_talk = false
 		DialogueManager.show_example_dialogue_balloon(dialogue, "start")
 		

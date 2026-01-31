@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://cxf53k235sl6q"]
 
 [ext_resource type="Script" uid="uid://cfpbwa6vl8dex" path="res://Player/player.gd" id="1_5cwa8"]
-[ext_resource type="SpriteFrames" uid="uid://dmupnwdf3ae0e" path="res://Player/starting_sprite_frames.tres" id="2_5cwa8"]
+[ext_resource type="SpriteFrames" uid="uid://0er7wv8xict1" path="res://Player/default_sprite_frames.tres" id="2_5cwa8"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_5cwa8"]
 
@@ -16,6 +16,8 @@ shape = SubResource("RectangleShape2D_5cwa8")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1478686338]
 sprite_frames = ExtResource("2_5cwa8")
-animation = &"walk_up"
+animation = &"walk_down"
+frame_progress = 0.28214854
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=483730963]
+zoom = Vector2(0.745, 0.745)

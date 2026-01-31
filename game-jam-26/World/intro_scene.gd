@@ -5,7 +5,7 @@ extends Node2D
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	pass
+	DialogueManager.show_example_dialogue_balloon(load("res://Dialogue/intro.dialogue"), "start")
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
