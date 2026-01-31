@@ -20,6 +20,9 @@ func _process(delta: float) -> void:
 	if Input.is_action_pressed("Interact") && can_talk:
 		can_talk = false
 		DialogueManager.show_example_dialogue_balloon(dialogue, "start")
+		
+	if npc_name == "Victim" && GameState.victim_gave_mask:
+		animated_sprite_2d.sprite_frames = load("res://NPCs/Victim/victim2_sprite_frames.tres")
 
 func _on_body_entered(body: Node2D) -> void:
 	can_talk = true

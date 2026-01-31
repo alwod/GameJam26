@@ -10,7 +10,6 @@ func _ready() -> void:
 
 func _process(delta: float) -> void:
 	check_mask()
-	print(GameState.is_talking)
 
 func _physics_process(delta: float) -> void:
 	# Don't move the character during dialogue
