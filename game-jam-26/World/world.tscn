@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://b1mrl3f4ge6hq"]
 
-[ext_resource type="Texture2D" uid="uid://bo5rvymaw5p0u" path="res://icon.svg" id="1_62w18"]
+[ext_resource type="Texture2D" uid="uid://bcqja46lpvh0y" path="res://World/floor.png" id="1_j8job"]
 [ext_resource type="PackedScene" uid="uid://cxf53k235sl6q" path="res://Player/player_character.tscn" id="2_8a836"]
 [ext_resource type="PackedScene" uid="uid://b7lppd6o7a858" path="res://NPCs/test_character.tscn" id="3_j8job"]
 
@@ -8,8 +8,8 @@
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=703660985]
 position = Vector2(578, 322)
-scale = Vector2(8.96875, 5.0625)
-texture = ExtResource("1_62w18")
+scale = Vector2(3.874, 2.187)
+texture = ExtResource("1_j8job")
 
 [node name="PlayerCharacter" parent="." unique_id=1311250608 instance=ExtResource("2_8a836")]
 position = Vector2(587, 283)

@@ -1,43 +1,19 @@
 [gd_scene format=3 uid="uid://cxf53k235sl6q"]
 
 [ext_resource type="Script" uid="uid://cfpbwa6vl8dex" path="res://Player/player.gd" id="1_5cwa8"]
+[ext_resource type="SpriteFrames" uid="uid://0er7wv8xict1" path="res://Player/default_sprite_frames.tres" id="2_5cwa8"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_5cwa8"]
-
-[sub_resource type="SpriteFrames" id="SpriteFrames_dfy8k"]
-animations = [{
-"frames": [],
-"loop": true,
-"name": &"default",
-"speed": 5.0
-}, {
-"frames": [],
-"loop": true,
-"name": &"walk_down",
-"speed": 5.0
-}, {
-"frames": [],
-"loop": true,
-"name": &"walk_left",
-"speed": 5.0
-}, {
-"frames": [],
-"loop": true,
-"name": &"walk_right",
-"speed": 5.0
-}, {
-"frames": [],
-"loop": true,
-"name": &"walk_up",
-"speed": 5.0
-}]
 
 [node name="CharacterBody2D" type="CharacterBody2D" unique_id=811081228]
 script = ExtResource("1_5cwa8")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=763776817]
+scale = Vector2(3.36, 3.36)
 shape = SubResource("RectangleShape2D_5cwa8")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1478686338]
-sprite_frames = SubResource("SpriteFrames_dfy8k")
-animation = &"walk_right"
+sprite_frames = ExtResource("2_5cwa8")
+animation = &"idle_up"
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=483730963]

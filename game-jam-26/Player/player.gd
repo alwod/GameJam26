@@ -44,13 +44,12 @@ func check_mask() -> void:
 
 # Change animation depending on button pressed
 func change_animation() -> void:
-	if Input.is_action_pressed("Up"):
+	if Input.is_action_just_pressed("Up"):
 		animated_sprite_2d.play("walk_up")
-	elif Input.is_action_pressed("Down"):
+	elif Input.is_action_just_pressed("Down"):
 		animated_sprite_2d.play("walk_down")
-	elif Input.is_action_pressed("Left"):
+	elif Input.is_action_just_pressed("Left"):
 		animated_sprite_2d.play("walk_left")
-	elif Input.is_action_pressed("Right"):
+	elif Input.is_action_just_pressed("Right"):
 		animated_sprite_2d.play("walk_right")
-	else:
-		animated_sprite_2d.play("default")
+	
