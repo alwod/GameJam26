@@ -1,5 +1,72 @@
 ~ start
 set GameState.is_talking = true
+if GameState.current_mask == GameState.Masks.DEFAULT || GameState.current_mask == GameState.Masks.DIPLOMAT:
+	=> bad_mask
+elif GameState.current_mask != GameState.Masks.COURTESAN || GameState.current_mask != GameState.Masks.ARISTROCRAT:
+	=> ok_mask
+else:
+	=> good_mask
 
+
+~ end_chat
 set GameState.is_talking = false
 => END
+
+~ bad_mask
+Earnest Wubben-Arlington XI: “And who gave you permission to talk to us, peasant? Know your place before I have the guards teach it to you!”
+=> end_chat
+
+~ ok_mask
+Earnest Wubben-Arlington XI: Good evening. We were engaged in conversation far too advanced for the likes of you, but I suppose I can spare a moment.
+~ iq_ok
+- Have you seen anything interesting going on tonight?
+	Earnest Wubben-Arlington XI: Everyone around here is interesting, but I’d hoped our dear King wouldn’t invite those foreigners to the party. Do they even understand our customs?
+	- I quite like them. They don't seem so bad!
+		Earnest Wubben-Arlington XI: Then you are a fool, and we have nothing more to say to each other.
+		=> end_chat
+	- What do you have against diplomats?
+		Earnest Wubben-Arlington XI: They come to our lands, and our King rolls out his very best for them. I can’t understand why he feels the need to allow them to sully our home. Is our King not happy with his own people? Must he welcome them in to replace his faithful?
+		- Perhaps the King seeks to win far away friends to secure our lands.
+			Earnest Wubben-Arlington XI:  He has enough friends within his own borders, thank you very much. Maybe if he wasn’t so busy entertaining pointless diplomats with frivolous jesters and musicians, he’d see that. Perhaps something needs to be done. Good evening.
+			=> end_chat
+		- Our King should listen to voices closer to home.
+			Earnest Wubben-Arlington XI: I couldn’t have put it more eloquently myself!
+			=> iq_ok
+- Are you enjoying the evening?
+	Earnest Wubben-Arlington XI: The night is just getting started. I do hope it picks up soon.
+	- What do you think of the band?
+		Earnest Wubben-Arlington XI: Dismal. The bass sounds like a screeching carriage wheel, the singer looks like a harlot, and the less said about the Orc the better.
+		=> iq_ok
+	- What do you think of the food?
+		Earnest Wubben-Arlington XI: These spices are strange. One might think they were poison if the King himself wasn’t eating them. But if they’re good enough for the Courtesans – and it seems that they are – then they’ll have to be good enough for me. Maybe I’ll offer one of them one of these small, bitter cakes.
+		=> iq_ok
+- I've heard there's a killer on the loose. Do you know anything?
+	Earnest Wubben-Arlington XI: Yes, it’s the waiter with the gait in his walk. He’s killing the mood with his refusal to pour anything more than a drop. Now go bother someone else.
+	=> end_chat
+- Goodbye
+	Earnest Wubben-Arlington XI: Good Evening.
+=> end_chat
+
+~ good_mask
+Earnest Wubben-Arlington XI: Well, hello there! Join us! We were just talking about that ghastly orc! I can’t believe they let that thing onto a stage!
+~ iq_good
+- Hey! That’s my friend, you pompous cunt!
+	Earnest Wubben-Arlington XI: What? You fiend! You fraud! Give me that mask! If I see you again, I’ll have the guards run you through!
+	set GameState.current_mask = GameState.Masks.DEFAULT
+	=> end_chat
+- It’s a disgusting creature, is it not? Truly grotesque.
+	Earnest Wubben-Arlington XI: They all are. Look at that brute. He looks like he could tear any one of us apart, and they let him remain unchained! And that gnome! Vermin! Petulant, irritating swine who crawl around in the dark fighting each other over the pettiest of grudges! Disgusting! All of them!
+	~ iq_good_2a
+	- What do you know about gnomes?
+		Earnest Wubben-Arlington XI: Only that they’re vile creatures. There’s a reason that you don’t see many of them. They kill each other over small feuds not worth mentioning. Whether it’s a trinket made of tin or a King’s treasure hoard, they’ll gut you like a fish for the privilege. I hope the King has that bass player domesticated, or he’ll rip us apart for a crumb of cheese.
+		=> iq_good_2a
+	- Have you ever seen an orc do that?
+		Earnest Wubben-Arlington XI: Well…no. But look at it!
+		=> iq_good_2a
+	- They’re just musicians, aren’t they? What’s the worst they could do?
+		Earnest Wubben-Arlington XI: You mean besides deafening us with their racket? Entertainers can’t be trusted. They’re just the unwashed unemployed with happier faces!
+		=> iq_good_2a
+	- They’re not worth talking about.
+		Earnest Wubben-Arlington XI: True enough.
+
+=> end_chat

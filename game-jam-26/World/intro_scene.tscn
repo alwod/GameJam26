@@ -76,6 +76,7 @@ dialogue = ExtResource("14_bpi65")
 
 [node name="Player" parent="Characters" unique_id=811081228 instance=ExtResource("3_qdmss")]
 position = Vector2(62, -77)
+speed = 200.0
 
 [node name="BlackScreen" type="Sprite2D" parent="." unique_id=341669443]
 visible = false

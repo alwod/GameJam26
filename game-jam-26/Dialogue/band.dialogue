@@ -1,5 +1,15 @@
 ~ start
 set GameState.is_talking = true
+if GameState.current_mask == GameState.Masks.DEFAULT || GameState.current_mask == GameState.Masks.STAFF:
+	=> bad_mask
 
+~ end_title
 set GameState.is_talking = false
 => END
+
+~ bad_mask
+=> end_title
+
+~ ok_mask
+
+~ good_mask
