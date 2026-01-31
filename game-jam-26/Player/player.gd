@@ -2,6 +2,7 @@ extends CharacterBody2D
 
 @export var speed : float = 300.0
 var is_talking : bool = false
+@onready var animated_sprite_2d: AnimatedSprite2D = $AnimatedSprite2D
 
 func _ready() -> void:
 	# Make sure the mask is set to the default one.
@@ -19,6 +20,8 @@ func _physics_process(delta: float) -> void:
 	if is_talking:
 		return
 	
+	change_animation()
+	
 	#Move player up or down
 	var vert_direction := Input.get_axis("Up","Down")
 	if vert_direction:
@@ -35,6 +38,19 @@ func _physics_process(delta: float) -> void:
 
 	move_and_slide()
 
-func check_mask():
+func check_mask() -> void:
 	#TODO This method should change the sprite depending on the mask
 	pass
+
+# Change animation depending on button pressed
+func change_animation() -> void:
+	if Input.is_action_pressed("Up"):
+		animated_sprite_2d.play("walk_up")
+	elif Input.is_action_pressed("Down"):
+		animated_sprite_2d.play("walk_down")
+	elif Input.is_action_pressed("Left"):
+		animated_sprite_2d.play("walk_left")
+	elif Input.is_action_pressed("Right"):
+		animated_sprite_2d.play("walk_right")
+	else:
+		animated_sprite_2d.play("default")

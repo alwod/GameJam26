@@ -2,13 +2,17 @@
 
 [ext_resource type="Texture2D" uid="uid://bo5rvymaw5p0u" path="res://icon.svg" id="1_cps5u"]
 [ext_resource type="Script" uid="uid://bae1pd8n1pcd" path="res://NPCs/test_character.gd" id="1_s117j"]
-[ext_resource type="Resource" uid="uid://bvavry0selnub" path="res://Dialogue/test_dialogue.dialogue" id="2_t5yk8"]
+[ext_resource type="Script" uid="uid://v3arbugmat6e" path="res://NPCs/npc.gd" id="2_t5yk8"]
+
+[sub_resource type="Resource" id="Resource_2nv3k"]
+script = ExtResource("2_t5yk8")
+metadata/_custom_type_script = "uid://v3arbugmat6e"
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_cps5u"]
 
 [node name="TestCharacter" type="Area2D" unique_id=12375641]
 script = ExtResource("1_s117j")
-dialogue = ExtResource("2_t5yk8")
+npc_info = SubResource("Resource_2nv3k")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1676627733]
 shape = SubResource("CircleShape2D_cps5u")

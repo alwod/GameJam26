@@ -1,4 +1,4 @@
-class_name npc
+class_name NPCInfo
 extends Resource
 
 @export var name : String
@@ -6,6 +6,8 @@ extends Resource
 @export var sprite : SpriteFrames
 
 @export var dialogue : DialogueResource
+
+@export var is_evil : bool = false
 
 func _init() -> void:
 	name = "No Name"

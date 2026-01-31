@@ -6,7 +6,7 @@ else:
 	Mikha: You aren't wearing your original mask!
 
 # Can't figure out how to put code inside dialogue without using an if statement, should probably change
-# The change_mask method always returns true btw, its so i can call it inside an if statement
+# The change_mask method always returns true btw, its so i can call it inside an if statement---+
 if GameState.change_mask(GameState.Masks.DIPLOMAT):
 	Mikha: Right, lets change what you're wearing...
 
