@@ -1,7 +1,8 @@
-class_name NPCInfo
-extends Resource
+extends Node2D
 
-@export var name : String
+var can_talk : bool = false
+
+@export var npc_name : String
 @export var portrait : Texture2D
 @export var sprite : SpriteFrames
 
@@ -9,8 +10,20 @@ extends Resource
 
 @export var is_evil : bool = false
 
-func _init() -> void:
-	name = "No Name"
-	portrait = load("res://icon.svg")
-	sprite = null
-	dialogue = load("res://Dialogue/test_dialogue.dialogue")
+@onready var animated_sprite_2d: AnimatedSprite2D = $AnimatedSprite2D
+
+func _ready() -> void:
+	animated_sprite_2d.sprite_frames = sprite
+	
+
+func _process(delta: float) -> void:
+	if Input.is_action_pressed("Interact") && can_talk:
+		can_talk = false
+		DialogueManager.show_example_dialogue_balloon(dialogue, "start")
+
+func _on_body_entered(body: Node2D) -> void:
+	can_talk = true
+	
+
+func _on_body_exited(body: Node2D) -> void:
+	can_talk = false

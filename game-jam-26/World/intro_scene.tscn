@@ -1,3 +1,42 @@
 [gd_scene format=3 uid="uid://dgbj413cqgwic"]
 
+[ext_resource type="Texture2D" uid="uid://bcqja46lpvh0y" path="res://World/floor.png" id="1_hs8qo"]
+[ext_resource type="Script" uid="uid://dbvlcmlen0p8d" path="res://World/intro_scene.gd" id="1_r8ji3"]
+[ext_resource type="PackedScene" uid="uid://os60yw6xpb8m" path="res://World/test_wall.tscn" id="2_jj51w"]
+[ext_resource type="PackedScene" uid="uid://cxf53k235sl6q" path="res://Player/player_character.tscn" id="3_qdmss"]
+[ext_resource type="PackedScene" uid="uid://cslrmxbour0xq" path="res://NPCs/npc.tscn" id="5_4g07b"]
+[ext_resource type="SpriteFrames" uid="uid://b05bm2gvmtja3" path="res://NPCs/Victim/victim_sprite_frames.tres" id="6_csqqw"]
+[ext_resource type="Resource" uid="uid://c3v8b8pplf62q" path="res://Dialogue/intro.dialogue" id="7_qofjf"]
+
 [node name="IntroScene" type="Node2D" unique_id=213701460]
+script = ExtResource("1_r8ji3")
+
+[node name="Background" type="Sprite2D" parent="." unique_id=482349721]
+texture = ExtResource("1_hs8qo")
+
+[node name="Walls" type="Node2D" parent="." unique_id=639258923]
+
+[node name="TestWall" parent="Walls" unique_id=1440774293 instance=ExtResource("2_jj51w")]
+position = Vector2(-304.99997, 1)
+scale = Vector2(1.455, 18.08)
+
+[node name="TestWall2" parent="Walls" unique_id=555399909 instance=ExtResource("2_jj51w")]
+position = Vector2(0, 169)
+scale = Vector2(29.03, 1)
+
+[node name="TestWall3" parent="Walls" unique_id=662260389 instance=ExtResource("2_jj51w")]
+position = Vector2(0, -168)
+scale = Vector2(29, 1.27)
+
+[node name="TestWall4" parent="Walls" unique_id=909555317 instance=ExtResource("2_jj51w")]
+position = Vector2(306, 0)
+scale = Vector2(1.485, 18.19)
+
+[node name="CharacterBody2D" parent="." unique_id=811081228 instance=ExtResource("3_qdmss")]
+position = Vector2(-101, -2)
+
+[node name="Npc" parent="." unique_id=41319422 instance=ExtResource("5_4g07b")]
+position = Vector2(130, -5)
+npc_name = "Victim"
+sprite = ExtResource("6_csqqw")
+dialogue = ExtResource("7_qofjf")

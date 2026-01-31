@@ -1,24 +1,16 @@
 [gd_scene format=3 uid="uid://b7lppd6o7a858"]
 
 [ext_resource type="Texture2D" uid="uid://bo5rvymaw5p0u" path="res://icon.svg" id="1_cps5u"]
-[ext_resource type="Script" uid="uid://bae1pd8n1pcd" path="res://NPCs/test_character.gd" id="1_s117j"]
-[ext_resource type="Script" uid="uid://v3arbugmat6e" path="res://NPCs/npc.gd" id="2_t5yk8"]
-
-[sub_resource type="Resource" id="Resource_2nv3k"]
-script = ExtResource("2_t5yk8")
-metadata/_custom_type_script = "uid://v3arbugmat6e"
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_cps5u"]
 
 [node name="TestCharacter" type="Area2D" unique_id=12375641]
-script = ExtResource("1_s117j")
-npc_info = SubResource("Resource_2nv3k")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1676627733]
+scale = Vector2(11.175, 11.175)
 shape = SubResource("CircleShape2D_cps5u")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1939244831]
-scale = Vector2(0.054687493, 0.07812499)
 texture = ExtResource("1_cps5u")
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]

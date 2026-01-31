@@ -1,7 +1,6 @@
 extends CharacterBody2D
 
 @export var speed : float = 300.0
-var is_talking : bool = false
 @onready var animated_sprite_2d: AnimatedSprite2D = $AnimatedSprite2D
 
 func _ready() -> void:
@@ -11,14 +10,14 @@ func _ready() -> void:
 
 func _process(delta: float) -> void:
 	if DialogueManager.dialogue_started:
-		is_talking = true
+		GameState.is_talking = true
 	if DialogueManager.dialogue_ended:
-		is_talking = false
+		GameState.is_talking = false
 	check_mask()
 
 func _physics_process(delta: float) -> void:
 	# Don't move the character during dialogue
-	if is_talking:
+	if GameState.is_talking:
 		return
 	
 	change_animation()
@@ -43,6 +42,9 @@ func check_mask() -> void:
 	#TODO This method should change the sprite depending on the mask
 	if GameState.current_mask == GameState.Masks.DEFAULT:
 		animated_sprite_2d.sprite_frames = load("res://Player/default_sprite_frames.tres")
+	
+	if GameState.current_mask == GameState.Masks.FOOL:
+		animated_sprite_2d.sprite_frames = load("res://Player/starting_sprite_frames.tres")
 
 # Change animation depending on button pressed
 func change_animation() -> void:
