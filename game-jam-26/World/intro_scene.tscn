@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://dgbj413cqgwic"]
 
-[ext_resource type="Texture2D" uid="uid://bcqja46lpvh0y" path="res://World/floor.png" id="1_hs8qo"]
 [ext_resource type="Script" uid="uid://dbvlcmlen0p8d" path="res://World/intro_scene.gd" id="1_r8ji3"]
+[ext_resource type="Texture2D" uid="uid://bsqxbgbghtp7i" path="res://World/Floor_extended.png" id="2_csqqw"]
 [ext_resource type="PackedScene" uid="uid://os60yw6xpb8m" path="res://World/test_wall.tscn" id="2_jj51w"]
 [ext_resource type="PackedScene" uid="uid://cxf53k235sl6q" path="res://Player/player_character.tscn" id="3_qdmss"]
 [ext_resource type="PackedScene" uid="uid://cslrmxbour0xq" path="res://NPCs/npc.tscn" id="5_4g07b"]
@@ -14,7 +14,7 @@ script = ExtResource("1_r8ji3")
 [node name="Background" type="Node2D" parent="." unique_id=563993020]
 
 [node name="BackgroundSprite" type="Sprite2D" parent="Background" unique_id=482349721]
-texture = ExtResource("1_hs8qo")
+texture = ExtResource("2_csqqw")
 
 [node name="Walls" type="Node2D" parent="Background" unique_id=639258923]
 

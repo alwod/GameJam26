@@ -9,34 +9,29 @@ func _ready() -> void:
 	animated_sprite_2d.sprite_frames = load("res://Player/default_sprite_frames.tres")
 
 func _process(delta: float) -> void:
-	if DialogueManager.dialogue_started:
-		GameState.is_talking = true
-	if DialogueManager.dialogue_ended:
-		GameState.is_talking = false
 	check_mask()
+	print(GameState.is_talking)
 
 func _physics_process(delta: float) -> void:
 	# Don't move the character during dialogue
-	if GameState.is_talking:
-		return
+	if !GameState.is_talking:
+		change_animation()
 	
-	change_animation()
-	
-	#Move player up or down
-	var vert_direction := Input.get_axis("Up","Down")
-	if vert_direction:
-		velocity.y = vert_direction * speed
-	else:
-		velocity.y = move_toward(velocity.y, 0, speed)
+		#Move player up or down
+		var vert_direction := Input.get_axis("Up","Down")
+		if vert_direction:
+			velocity.y = vert_direction * speed
+		else:
+			velocity.y = move_toward(velocity.y, 0, speed)
 
-	# Move player left and right
-	var horiz_direction := Input.get_axis("Left", "Right")
-	if horiz_direction:
-		velocity.x = horiz_direction * speed
-	else:
-		velocity.x = move_toward(velocity.x, 0, speed)
+		# Move player left and right
+		var horiz_direction := Input.get_axis("Left", "Right")
+		if horiz_direction:
+			velocity.x = horiz_direction * speed
+		else:
+			velocity.x = move_toward(velocity.x, 0, speed)
 
-	move_and_slide()
+		move_and_slide()
 
 func check_mask() -> void:
 	#TODO This method should change the sprite depending on the mask

@@ -21,6 +21,7 @@ sprite_frames = ExtResource("1_0ikh5")
 
 [node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=564194784]
 scale = Vector2(2.105, 3.13)
+collision_layer = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=394659101]
 shape = SubResource("RectangleShape2D_vxakg")

@@ -1,4 +1,5 @@
 ~ start
+set GameState.is_talking = true
 Random Guest: Come on, lemme try it on. I've always wanted to be a real fool.
 - Sure
 	=> part2
@@ -15,7 +16,7 @@ Random Guest: Come on, lemme try it on. I've always wanted to be a real fool.
 
 ~ part2
 Random Guest: Yes! Here, take mine.
-if GameState.change_mask(GameState.Masks.DEFAULT):
+set GameState.current_mask = GameState.Masks.DEFAULT
 	Random Guest: Hehe, oh the shenanigans I could cause with this!
 
 ~ part3
@@ -34,5 +35,7 @@ Gaurd: My grace! The victim appears to be a lesser duke.
 King: Oh. Well in that case, carry on.
 # Resume music and start game.
 if EventManager.murder3():
-	=> END
+	You: That man was murdered while wearing my mask. What if the true target was meant to be me? The killer would know now that he's failed...
+You: I must look into this before they strike again. After all, I am the most competent fool at this ball.
+set GameState.is_talking = false
 => END

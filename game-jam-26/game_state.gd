@@ -2,7 +2,7 @@ extends Node
 
 var current_dialogue : DialogueResource
 
-var is_talking : bool
+var is_talking : bool = false
 
 enum Masks {
 	DEFAULT,
