@@ -20,6 +20,14 @@ DialogueManager="*uid://c3rodes2l3gxb"
 GameState="*uid://wl48issvgerx"
 EventManager="*uid://5l2nrwaoveuh"
 
+[display]
+
+window/size/viewport_width=320
+window/size/viewport_height=180
+window/size/window_width_override=1280
+window/size/window_height_override=720
+window/stretch/mode="viewport"
+
 [editor_plugins]
 
 enabled=PackedStringArray("res://addons/dialogue_manager/plugin.cfg")
@@ -68,6 +76,7 @@ locale/translations_pot_files=PackedStringArray("res://Dialogue/test_dialogue.di
 
 [rendering]
 
+textures/canvas_textures/default_texture_filter=0
 rendering_device/driver.windows="d3d12"
 renderer/rendering_method="gl_compatibility"
 renderer/rendering_method.mobile="gl_compatibility"
