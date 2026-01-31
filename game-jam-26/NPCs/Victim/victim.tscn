@@ -2,10 +2,19 @@
 
 [ext_resource type="Script" uid="uid://cb4xq6kvud1ig" path="res://NPCs/npc.gd" id="1_onsjx"]
 [ext_resource type="SpriteFrames" uid="uid://b05bm2gvmtja3" path="res://NPCs/Victim/victim_sprite_frames.tres" id="2_l3yn4"]
+[ext_resource type="AudioStream" uid="uid://s7hnn55h2q1f" path="res://GGJ_Mask_SFX_Bounce/VictimTalking-001.wav" id="3_hnfmn"]
+[ext_resource type="AudioStream" uid="uid://50axfhgfna7t" path="res://GGJ_Mask_SFX_Bounce/VictimTalking-002.wav" id="4_palm0"]
+[ext_resource type="AudioStream" uid="uid://dfpouls8ckr58" path="res://GGJ_Mask_SFX_Bounce/VictimTalking-003.wav" id="5_3olop"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_vxakg"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_vxakg"]
+
+[sub_resource type="AudioStreamRandomizer" id="AudioStreamRandomizer_ypfaa"]
+streams_count = 3
+stream_0/stream = ExtResource("3_hnfmn")
+stream_1/stream = ExtResource("4_palm0")
+stream_2/stream = ExtResource("5_3olop")
 
 [node name="Victim" type="Node2D" unique_id=41319422]
 script = ExtResource("1_onsjx")
@@ -27,6 +36,9 @@ collision_layer = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=394659101]
 shape = SubResource("RectangleShape2D_vxakg")
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="." unique_id=1157808939]
+stream = SubResource("AudioStreamRandomizer_ypfaa")
 
 [connection signal="body_entered" from="Area2D" to="." method="_on_body_entered"]
 [connection signal="body_exited" from="Area2D" to="." method="_on_body_exited"]

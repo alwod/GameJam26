@@ -15,6 +15,8 @@ func _process(delta: float) -> void:
 func _physics_process(delta: float) -> void:
 	# Don't move the character during dialogue
 	if !GameState.is_talking:
+		# Play randomizer if Jester is talking
+		audio_stream_player_2d.play()
 		change_animation()
 	
 		#Move player up or down
@@ -40,6 +42,8 @@ func check_mask() -> void:
 	
 	if GameState.current_mask == GameState.Masks.FOOL:
 		animated_sprite_2d.sprite_frames = load("res://Player/starting_sprite_frames.tres")
+		audio_stream_player_2d.stream = load("res://GGJ_Mask_SFX_Bounce/NoticeMask.wav")
+		audio_stream_player_2d.play()
 
 # Change animation depending on button pressed
 func change_animation() -> void:
@@ -67,7 +71,3 @@ func change_animation() -> void:
 		animated_sprite_2d.play("walk_right")
 	if Input.is_action_just_released("Right"):
 		animated_sprite_2d.play("idle_right")
-
-
-func change_sound():
-	audio_stream_player_2d.stream = load("res://GGJ_Mask_SFX_Bounce/AristocratTalking-001.wav")

@@ -86,3 +86,5 @@ visible = false
 position = Vector2(2.4999895, 6.0000095)
 scale = Vector2(29.1, 585.99994)
 texture = SubResource("PlaceholderTexture2D_csqqw")
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="." unique_id=937278306]

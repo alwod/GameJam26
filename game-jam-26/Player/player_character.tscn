@@ -3,8 +3,16 @@
 [ext_resource type="Script" uid="uid://cfpbwa6vl8dex" path="res://Player/player.gd" id="1_5cwa8"]
 [ext_resource type="SpriteFrames" uid="uid://0er7wv8xict1" path="res://Player/default_sprite_frames.tres" id="2_5cwa8"]
 [ext_resource type="AudioStream" uid="uid://dbxqduj0f08py" path="res://GGJ_Mask_SFX_Bounce/JesterTalking-001.wav" id="3_a5bt4"]
+[ext_resource type="AudioStream" uid="uid://chijjxacrl3u7" path="res://GGJ_Mask_SFX_Bounce/JesterTalking-002.wav" id="4_qyuka"]
+[ext_resource type="AudioStream" uid="uid://d3ba2l0yitfbc" path="res://GGJ_Mask_SFX_Bounce/JesterTalking-003.wav" id="5_lfdof"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_5cwa8"]
+
+[sub_resource type="AudioStreamRandomizer" id="AudioStreamRandomizer_tvpqd"]
+streams_count = 3
+stream_0/stream = ExtResource("3_a5bt4")
+stream_1/stream = ExtResource("4_qyuka")
+stream_2/stream = ExtResource("5_lfdof")
 
 [node name="Player" type="CharacterBody2D" unique_id=811081228]
 collision_layer = 3
@@ -24,7 +32,7 @@ frame_progress = 0.28214854
 zoom = Vector2(0.745, 0.745)
 
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="." unique_id=779080964]
-stream = ExtResource("3_a5bt4")
+stream = SubResource("AudioStreamRandomizer_tvpqd")
 
 [node name="AudioListener2D" type="AudioListener2D" parent="." unique_id=736545849]
 current = true
