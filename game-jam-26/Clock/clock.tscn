@@ -1,7 +1,9 @@
 [gd_scene format=3 uid="uid://bhevcq3qo3ms0"]
 
 [ext_resource type="Script" uid="uid://c41vyjl3lsvyd" path="res://Clock/clock.gd" id="1_3sgw5"]
-[ext_resource type="Texture2D" uid="uid://bo5rvymaw5p0u" path="res://icon.svg" id="2_hltds"]
+[ext_resource type="Texture2D" uid="uid://dljy8hja16abe" path="res://Clock/clock.png" id="2_7yix1"]
+[ext_resource type="Texture2D" uid="uid://fxl4pjfpd1b2" path="res://Clock/hand.png" id="3_cm2v2"]
+[ext_resource type="Texture2D" uid="uid://b27bbgx1fng4x" path="res://Clock/metronome.png" id="4_qbswj"]
 
 [node name="Clock" type="Node2D" unique_id=741243204]
 script = ExtResource("1_3sgw5")
@@ -11,9 +13,11 @@ wait_time = 10.0
 autostart = true
 
 [node name="ClockFace" type="Sprite2D" parent="." unique_id=1254519464]
-texture = ExtResource("2_hltds")
+texture = ExtResource("2_7yix1")
 
 [node name="ClockHand" type="Sprite2D" parent="." unique_id=1457985700]
-position = Vector2(0, -1)
-scale = Vector2(0.4140625, 0.4140625)
-texture = ExtResource("2_hltds")
+position = Vector2(0, -63.1)
+texture = ExtResource("3_cm2v2")
+
+[node name="Metronome" type="Sprite2D" parent="." unique_id=576253882]
+texture = ExtResource("4_qbswj")
