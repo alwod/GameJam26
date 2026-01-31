@@ -11,24 +11,26 @@
 [node name="IntroScene" type="Node2D" unique_id=213701460]
 script = ExtResource("1_r8ji3")
 
-[node name="Background" type="Sprite2D" parent="." unique_id=482349721]
+[node name="Background" type="Node2D" parent="." unique_id=563993020]
+
+[node name="BackgroundSprite" type="Sprite2D" parent="Background" unique_id=482349721]
 texture = ExtResource("1_hs8qo")
 
-[node name="Walls" type="Node2D" parent="." unique_id=639258923]
+[node name="Walls" type="Node2D" parent="Background" unique_id=639258923]
 
-[node name="TestWall" parent="Walls" unique_id=1440774293 instance=ExtResource("2_jj51w")]
+[node name="TestWall" parent="Background/Walls" unique_id=1440774293 instance=ExtResource("2_jj51w")]
 position = Vector2(-304.99997, 1)
 scale = Vector2(1.455, 18.08)
 
-[node name="TestWall2" parent="Walls" unique_id=555399909 instance=ExtResource("2_jj51w")]
+[node name="TestWall2" parent="Background/Walls" unique_id=555399909 instance=ExtResource("2_jj51w")]
 position = Vector2(0, 169)
 scale = Vector2(29.03, 1)
 
-[node name="TestWall3" parent="Walls" unique_id=662260389 instance=ExtResource("2_jj51w")]
+[node name="TestWall3" parent="Background/Walls" unique_id=662260389 instance=ExtResource("2_jj51w")]
 position = Vector2(0, -168)
 scale = Vector2(29, 1.27)
 
-[node name="TestWall4" parent="Walls" unique_id=909555317 instance=ExtResource("2_jj51w")]
+[node name="TestWall4" parent="Background/Walls" unique_id=909555317 instance=ExtResource("2_jj51w")]
 position = Vector2(306, 0)
 scale = Vector2(1.485, 18.19)
 
