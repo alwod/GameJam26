@@ -16,6 +16,7 @@
 [ext_resource type="Resource" uid="uid://ct2fqp4mfubtq" path="res://Dialogue/loner.dialogue" id="10_vi51s"]
 [ext_resource type="Resource" uid="uid://8gebwlqmgvsm" path="res://Dialogue/diplomat.dialogue" id="12_v0sf3"]
 [ext_resource type="Resource" uid="uid://cwrslp7nqf1nf" path="res://Dialogue/guard.dialogue" id="14_bpi65"]
+[ext_resource type="Texture2D" uid="uid://cmy62ejnebshb" path="res://World/Untitled_Artwork 3.png" id="17_v0sf3"]
 
 [sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_csqqw"]
 size = Vector2(30, 1)
@@ -78,11 +79,38 @@ position = Vector2(-31, 123)
 dialogue = ExtResource("14_bpi65")
 
 [node name="Player" parent="Characters" unique_id=811081228 instance=ExtResource("3_qdmss")]
-position = Vector2(62, -77)
+position = Vector2(21, -75)
 speed = 200.0
 
 [node name="BlackScreen" type="Sprite2D" parent="." unique_id=341669443]
 visible = false
-position = Vector2(2.4999895, 6.0000095)
-scale = Vector2(29.1, 585.99994)
+position = Vector2(-310.5, 106.99999)
+scale = Vector2(49.966667, 787.9999)
 texture = SubResource("PlaceholderTexture2D_csqqw")
+
+[node name="GameOver1" type="Sprite2D" parent="." unique_id=2032125832]
+visible = false
+
+[node name="GameOver2" type="Sprite2D" parent="." unique_id=1617341642]
+visible = false
+position = Vector2(-0.499997, 1.0000025)
+scale = Vector2(0.3382812, 0.34444445)
+texture = ExtResource("17_v0sf3")
+
+[node name="GameWin" type="Sprite2D" parent="." unique_id=629591657]
+visible = false
+
+[node name="Button" type="Button" parent="." unique_id=1268374830]
+visible = false
+offset_left = -201.0
+offset_top = 40.0
+offset_right = -44.0
+offset_bottom = 86.0
+theme_override_colors/icon_normal_color = Color(1, 1, 1, 0)
+theme_override_colors/icon_focus_color = Color(1, 1, 1, 0)
+theme_override_colors/icon_pressed_color = Color(1, 1, 1, 0)
+theme_override_colors/icon_hover_color = Color(1, 1, 1, 0)
+theme_override_colors/icon_hover_pressed_color = Color(1, 1, 1, 0)
+theme_override_colors/icon_disabled_color = Color(1, 1, 1, 0.4)
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

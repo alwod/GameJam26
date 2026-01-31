@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bysu6hbto4500"
-path="res://.godot/imported/mask_victim.png-15fa2c08db003694867611a332db166f.ctex"
+uid="uid://bh3o5v1n5n0uh"
+path="res://.godot/imported/Player_Aristo_Left.png-3f0448376c9127027cf8ccbed092fb88.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Player/mask_victim.png"
-dest_files=["res://.godot/imported/mask_victim.png-15fa2c08db003694867611a332db166f.ctex"]
+source_file="res://Player/Player_Sprites/Player Aristo Sprite/Player_Aristo_Left.png"
+dest_files=["res://.godot/imported/Player_Aristo_Left.png-3f0448376c9127027cf8ccbed092fb88.ctex"]
 
 [params]
 

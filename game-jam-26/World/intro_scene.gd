@@ -1,6 +1,14 @@
 extends Node2D
 @onready var black_screen: Sprite2D = $BlackScreen
 @onready var victim: Node2D = $Characters/Victim
+@onready var player: CharacterBody2D = $Characters/Player
+
+@onready var game_over_1: Sprite2D = $GameOver1
+@onready var game_over_2: Sprite2D = $GameOver2
+@onready var game_win: Sprite2D = $GameWin
+@onready var button: Button = $Button
+
+var scene = preload("res://World/hacky_intermediate_scene.tscn").instantiate()
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -69,10 +77,22 @@ func good_ending() -> void:
 	
 func display_bad_ending_one() -> void:
 	GameState.display_bad_accuse = false
+	player.position = Vector2(0, 0)
+	button.visible = true
+	game_over_1.visible = true
 	
 func display_bad_ending_two() -> void:
 	GameState.display_game_over = false
-	print("Reached the final end")
+	player.position = Vector2(0, 0)
+	button.visible = true
+	game_over_2.visible = true
 
 func display_good_ending() -> void:
 	GameState.display_game_win = false
+	player.position = Vector2(0, 0)
+	button.visible = true
+	game_win.visible = true
+
+func _on_button_pressed() -> void:
+	if (button.visible):
+		get_tree().change_scene_to_file("res://World/hacky_intermediate_scene.tscn")
