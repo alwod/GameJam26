@@ -1,0 +1,16 @@
+[remap]
+
+importer="dialogue_manager"
+importer_version=15
+type="Resource"
+uid="uid://dwbia3o8twcki"
+path="res://.godot/imported/aristocrat.dialogue-4ecc7c02f8ab0283bb9b9f27f8bb6860.tres"
+
+[deps]
+
+source_file="res://Dialogue/aristocrat.dialogue"
+dest_files=["res://.godot/imported/aristocrat.dialogue-4ecc7c02f8ab0283bb9b9f27f8bb6860.tres"]
+
+[params]
+
+defaults=true

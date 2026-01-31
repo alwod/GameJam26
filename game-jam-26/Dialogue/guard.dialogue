@@ -1,0 +1,5 @@
+~ start
+set GameState.is_talking = true
+
+set GameState.is_talking = false
+=> END

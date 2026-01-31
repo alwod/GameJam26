@@ -9,8 +9,12 @@
 [ext_resource type="PackedScene" uid="uid://5mwan631l2hv" path="res://NPCs/Victim/victim.tscn" id="5_4g07b"]
 [ext_resource type="PackedScene" uid="uid://bd7qecn0uk8dw" path="res://NPCs/King/king.tscn" id="6_1u0sp"]
 [ext_resource type="PackedScene" uid="uid://dn0p5c6aoptts" path="res://NPCs/Aristrocrat/aristo.tscn" id="7_csqqw"]
+[ext_resource type="Resource" uid="uid://dwbia3o8twcki" path="res://Dialogue/aristocrat.dialogue" id="8_e1x5k"]
 [ext_resource type="PackedScene" uid="uid://bv33xxfpfpht2" path="res://NPCs/Loner/loner.tscn" id="8_qofjf"]
 [ext_resource type="PackedScene" uid="uid://rgbcb7wlqaw2" path="res://NPCs/Guard/guard.tscn" id="10_l6ukf"]
+[ext_resource type="Resource" uid="uid://ct2fqp4mfubtq" path="res://Dialogue/loner.dialogue" id="10_vi51s"]
+[ext_resource type="Resource" uid="uid://8gebwlqmgvsm" path="res://Dialogue/diplomat.dialogue" id="12_v0sf3"]
+[ext_resource type="Resource" uid="uid://cwrslp7nqf1nf" path="res://Dialogue/guard.dialogue" id="14_bpi65"]
 
 [sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_csqqw"]
 size = Vector2(30, 1)
@@ -55,16 +59,20 @@ position = Vector2(5, -159)
 
 [node name="Aristo" parent="Characters" unique_id=831314489 instance=ExtResource("7_csqqw")]
 position = Vector2(194, 66)
+dialogue = ExtResource("8_e1x5k")
 
 [node name="Loner" parent="Characters" unique_id=1714132578 instance=ExtResource("8_qofjf")]
 position = Vector2(-262, -117)
 npc_name = "Loner"
+dialogue = ExtResource("10_vi51s")
 
 [node name="Diplomat" parent="Characters" unique_id=41319422 instance=ExtResource("4_1h5m6")]
 position = Vector2(239, -69)
+dialogue = ExtResource("12_v0sf3")
 
 [node name="Guard" parent="Characters" unique_id=2086176646 instance=ExtResource("10_l6ukf")]
 position = Vector2(-31, 123)
+dialogue = ExtResource("14_bpi65")
 
 [node name="Player" parent="Characters" unique_id=811081228 instance=ExtResource("3_qdmss")]
 position = Vector2(62, -77)
