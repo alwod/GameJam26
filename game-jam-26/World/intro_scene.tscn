@@ -8,6 +8,9 @@
 [ext_resource type="SpriteFrames" uid="uid://b05bm2gvmtja3" path="res://NPCs/Victim/victim_sprite_frames.tres" id="6_csqqw"]
 [ext_resource type="Resource" uid="uid://c3v8b8pplf62q" path="res://Dialogue/intro.dialogue" id="7_qofjf"]
 
+[sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_csqqw"]
+size = Vector2(30, 1)
+
 [node name="IntroScene" type="Node2D" unique_id=213701460]
 script = ExtResource("1_r8ji3")
 
@@ -37,8 +40,14 @@ scale = Vector2(1.485, 18.19)
 [node name="CharacterBody2D" parent="." unique_id=811081228 instance=ExtResource("3_qdmss")]
 position = Vector2(-101, -2)
 
-[node name="Npc" parent="." unique_id=41319422 instance=ExtResource("5_4g07b")]
+[node name="Victim" parent="." unique_id=41319422 instance=ExtResource("5_4g07b")]
 position = Vector2(130, -5)
 npc_name = "Victim"
 sprite = ExtResource("6_csqqw")
 dialogue = ExtResource("7_qofjf")
+
+[node name="BlackScreen" type="Sprite2D" parent="." unique_id=341669443]
+visible = false
+position = Vector2(2.4999895, 6.0000095)
+scale = Vector2(29.1, 585.99994)
+texture = SubResource("PlaceholderTexture2D_csqqw")
