@@ -7,6 +7,7 @@ var is_talking : bool = false
 func _ready() -> void:
 	# Make sure the mask is set to the default one.
 	GameState.current_mask = GameState.Masks.DEFAULT
+	animated_sprite_2d.sprite_frames = load("res://Player/default_sprite_frames.tres")
 
 func _process(delta: float) -> void:
 	if DialogueManager.dialogue_started:
@@ -44,12 +45,27 @@ func check_mask() -> void:
 
 # Change animation depending on button pressed
 func change_animation() -> void:
+	#TODO could use some polish
+	# Player is moving up
 	if Input.is_action_just_pressed("Up"):
 		animated_sprite_2d.play("walk_up")
-	elif Input.is_action_just_pressed("Down"):
-		animated_sprite_2d.play("walk_down")
-	elif Input.is_action_just_pressed("Left"):
-		animated_sprite_2d.play("walk_left")
-	elif Input.is_action_just_pressed("Right"):
-		animated_sprite_2d.play("walk_right")
+	if Input.is_action_just_released("Up"):
+		animated_sprite_2d.play("idle_up")
 	
+	# Player is moving down
+	if Input.is_action_just_pressed("Down"):
+		animated_sprite_2d.play("walk_down")
+	if Input.is_action_just_released("Down"):
+		animated_sprite_2d.play("idle_down")
+	
+	# Player is moving left
+	if Input.is_action_just_pressed("Left"):
+		animated_sprite_2d.play("walk_left")
+	if Input.is_action_just_released("Left"):
+		animated_sprite_2d.play("idle_left")
+	
+	# Player is moving right
+	if Input.is_action_just_pressed("Right"):
+		animated_sprite_2d.play("walk_right")
+	if Input.is_action_just_released("Right"):
+		animated_sprite_2d.play("idle_right")
