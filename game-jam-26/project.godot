@@ -17,6 +17,7 @@ config/icon="res://icon.svg"
 [autoload]
 
 DialogueManager="*uid://c3rodes2l3gxb"
+GameState="*uid://wl48issvgerx"
 
 [editor_plugins]
 

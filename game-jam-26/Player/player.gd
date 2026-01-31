@@ -3,11 +3,16 @@ extends CharacterBody2D
 @export var speed : float = 300.0
 var is_talking : bool = false
 
+func _ready() -> void:
+	# Make sure the mask is set to the default one.
+	GameState.current_mask = GameState.Masks.DEFAULT
+
 func _process(delta: float) -> void:
 	if DialogueManager.dialogue_started:
 		is_talking = true
 	if DialogueManager.dialogue_ended:
 		is_talking = false
+	check_mask()
 
 func _physics_process(delta: float) -> void:
 	# Don't move the character during dialogue
@@ -29,3 +34,7 @@ func _physics_process(delta: float) -> void:
 		velocity.x = move_toward(velocity.x, 0, speed)
 
 	move_and_slide()
+
+func check_mask():
+	#TODO This method should change the sprite depending on the mask
+	pass
