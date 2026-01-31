@@ -1,9 +1,20 @@
 [gd_scene format=3 uid="uid://cslrmxbour0xq"]
 
 [ext_resource type="Script" uid="uid://cb4xq6kvud1ig" path="res://NPCs/npc.gd" id="1_vxakg"]
-[ext_resource type="SpriteFrames" uid="uid://drdyyo17xkupq" path="res://NPCs/Victim/victim2_sprite_frames.tres" id="2_vxakg"]
+[ext_resource type="Texture2D" uid="uid://bo5rvymaw5p0u" path="res://icon.svg" id="2_vxakg"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_vxakg"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_brkp4"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_vxakg")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_vxakg"]
 
@@ -17,7 +28,8 @@ scale = Vector2(5.085, 5.085)
 shape = SubResource("CircleShape2D_vxakg")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=789647657]
-sprite_frames = ExtResource("2_vxakg")
+position = Vector2(1.9073486e-06, 9.536743e-07)
+sprite_frames = SubResource("SpriteFrames_brkp4")
 
 [node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=564194784]
 scale = Vector2(2.105, 3.13)

@@ -1,0 +1,12 @@
+~ start
+set GameState.is_talking = true
+King: He was only a duke but a murder in my ballroom still vexes me, jester mine.
+You: Allow me to lift your spirits, my king.
+King: No. Unless you know who did it, leave me be.
+King: And you better not accuse the wrong party, lest I throw you in in the dungeon myself for offending a guest.
+- Accuse
+	=> END
+- Nevermind...
+set GameState.is_talking = false
+	=> END
+=> END

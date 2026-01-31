@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b1khe2iec1goc"
-path="res://.godot/imported/king_sprite_fix.png-7118c85f088f6f85a9367fe1a18c73ef.ctex"
+uid="uid://bgya8ucdyfb4y"
+path="res://.godot/imported/diplomat_sprite.png-c23127158ab1c8f932c63ae81152b8e4.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://NPCs/king_sprite_fix.png"
-dest_files=["res://.godot/imported/king_sprite_fix.png-7118c85f088f6f85a9367fe1a18c73ef.ctex"]
+source_file="res://NPCs/Diplomat/diplomat_sprite.png"
+dest_files=["res://.godot/imported/diplomat_sprite.png-c23127158ab1c8f932c63ae81152b8e4.ctex"]
 
 [params]
 

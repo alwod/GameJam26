@@ -1,14 +1,13 @@
 extends Node2D
 @onready var black_screen: Sprite2D = $BlackScreen
-@onready var victim: Node2D = $Victim
-
+@onready var victim: Node2D = $Characters/Victim
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	DialogueManager.show_example_dialogue_balloon(load("res://Dialogue/intro.dialogue"), "start")
 
 
-# Called every frame. 'delta' is the elapsed time since the previous frame.
+# Called every frame. 'delta' is the elapsed time since the previous frasme.
 func _process(delta: float) -> void:
 	if GameState.intro_lights_out:
 		lights_out()

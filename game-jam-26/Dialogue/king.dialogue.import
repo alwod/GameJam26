@@ -1,0 +1,16 @@
+[remap]
+
+importer="dialogue_manager"
+importer_version=15
+type="Resource"
+uid="uid://ydldee81uwya"
+path="res://.godot/imported/king.dialogue-038204134f9ca8ccc26ee5bf4a9ff3b6.tres"
+
+[deps]
+
+source_file="res://Dialogue/king.dialogue"
+dest_files=["res://.godot/imported/king.dialogue-038204134f9ca8ccc26ee5bf4a9ff3b6.tres"]
+
+[params]
+
+defaults=true

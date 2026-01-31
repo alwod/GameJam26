@@ -1,0 +1,14 @@
+[gd_resource type="SpriteFrames" format=3 uid="uid://bi1krup358t07"]
+
+[ext_resource type="Texture2D" uid="uid://b1khe2iec1goc" path="res://NPCs/King/king_sprite_fix.png" id="1_vs3ey"]
+
+[resource]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_vs3ey")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cppjk1btdqfog"
-path="res://.godot/imported/king_sprite.png-956344956452792e23120ff54a0c0975.ctex"
+uid="uid://b1khe2iec1goc"
+path="res://.godot/imported/king_sprite_fix.png-6c0d02a35b0ce6aee55e2b16f769ce12.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://NPCs/king_sprite.png"
-dest_files=["res://.godot/imported/king_sprite.png-956344956452792e23120ff54a0c0975.ctex"]
+source_file="res://NPCs/King/king_sprite_fix.png"
+dest_files=["res://.godot/imported/king_sprite_fix.png-6c0d02a35b0ce6aee55e2b16f769ce12.ctex"]
 
 [params]
 

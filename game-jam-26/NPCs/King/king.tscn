@@ -1,25 +1,17 @@
-[gd_scene format=3 uid="uid://bv33xxfpfpht2"]
+[gd_scene format=3 uid="uid://bd7qecn0uk8dw"]
 
-[ext_resource type="Script" uid="uid://cb4xq6kvud1ig" path="res://NPCs/npc.gd" id="1_jb4ge"]
-[ext_resource type="Texture2D" uid="uid://du02sxnomn2om" path="res://NPCs/Loner/loner_sprite.png" id="2_548lm"]
+[ext_resource type="Script" uid="uid://cb4xq6kvud1ig" path="res://NPCs/npc.gd" id="1_8mfct"]
+[ext_resource type="Resource" uid="uid://ydldee81uwya" path="res://Dialogue/king.dialogue" id="2_3j7f0"]
+[ext_resource type="SpriteFrames" uid="uid://bi1krup358t07" path="res://NPCs/King/king_sprite_frames.tres" id="2_15tu1"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_vxakg"]
-
-[sub_resource type="SpriteFrames" id="SpriteFrames_7q42m"]
-animations = [{
-"frames": [{
-"duration": 1.0,
-"texture": ExtResource("2_548lm")
-}],
-"loop": true,
-"name": &"default",
-"speed": 5.0
-}]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_vxakg"]
 
 [node name="Npc" type="Node2D" unique_id=41319422]
-script = ExtResource("1_jb4ge")
+script = ExtResource("1_8mfct")
+npc_name = "King"
+dialogue = ExtResource("2_3j7f0")
 
 [node name="Area2D" type="Area2D" parent="." unique_id=1807215339]
 scale = Vector2(5.085, 5.085)
@@ -29,7 +21,7 @@ shape = SubResource("CircleShape2D_vxakg")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=789647657]
 position = Vector2(1.9073486e-06, 9.536743e-07)
-sprite_frames = SubResource("SpriteFrames_7q42m")
+sprite_frames = ExtResource("2_15tu1")
 
 [node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=564194784]
 scale = Vector2(2.105, 3.13)

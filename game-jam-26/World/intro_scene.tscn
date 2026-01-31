@@ -4,9 +4,12 @@
 [ext_resource type="Texture2D" uid="uid://bsqxbgbghtp7i" path="res://World/Floor_extended.png" id="2_csqqw"]
 [ext_resource type="PackedScene" uid="uid://os60yw6xpb8m" path="res://World/test_wall.tscn" id="2_jj51w"]
 [ext_resource type="PackedScene" uid="uid://cxf53k235sl6q" path="res://Player/player_character.tscn" id="3_qdmss"]
-[ext_resource type="PackedScene" uid="uid://cslrmxbour0xq" path="res://NPCs/npc.tscn" id="5_4g07b"]
-[ext_resource type="SpriteFrames" uid="uid://b05bm2gvmtja3" path="res://NPCs/Victim/victim_sprite_frames.tres" id="6_csqqw"]
-[ext_resource type="Resource" uid="uid://c3v8b8pplf62q" path="res://Dialogue/intro.dialogue" id="7_qofjf"]
+[ext_resource type="PackedScene" uid="uid://0orgm35pkg8e" path="res://NPCs/Diplomat/diplomat.tscn" id="4_1h5m6"]
+[ext_resource type="PackedScene" uid="uid://5mwan631l2hv" path="res://NPCs/Victim/victim.tscn" id="5_4g07b"]
+[ext_resource type="PackedScene" uid="uid://bd7qecn0uk8dw" path="res://NPCs/King/king.tscn" id="6_1u0sp"]
+[ext_resource type="PackedScene" uid="uid://dn0p5c6aoptts" path="res://NPCs/Aristrocrat/aristo.tscn" id="7_csqqw"]
+[ext_resource type="PackedScene" uid="uid://bv33xxfpfpht2" path="res://NPCs/Loner/loner.tscn" id="8_qofjf"]
+[ext_resource type="PackedScene" uid="uid://rgbcb7wlqaw2" path="res://NPCs/Guard/guard.tscn" id="10_l6ukf"]
 
 [sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_csqqw"]
 size = Vector2(30, 1)
@@ -37,17 +40,32 @@ scale = Vector2(29, 1.27)
 position = Vector2(306, 0)
 scale = Vector2(1.485, 18.19)
 
-[node name="CharacterBody2D" parent="." unique_id=811081228 instance=ExtResource("3_qdmss")]
-position = Vector2(-101, -2)
+[node name="Diplomat" parent="Background" unique_id=41319422 instance=ExtResource("4_1h5m6")]
+position = Vector2(212, -74)
 
-[node name="Victim" parent="." unique_id=41319422 instance=ExtResource("5_4g07b")]
-position = Vector2(-7, -3)
-npc_name = "Victim"
-sprite = ExtResource("6_csqqw")
-dialogue = ExtResource("7_qofjf")
+[node name="Characters" type="Node2D" parent="." unique_id=1495838367]
+
+[node name="Victim" parent="Characters" unique_id=886347027 instance=ExtResource("5_4g07b")]
+position = Vector2(54, -31)
+
+[node name="Player" parent="Characters" unique_id=811081228 instance=ExtResource("3_qdmss")]
+position = Vector2(-35, -31)
+
+[node name="King" parent="Characters" unique_id=436551178 instance=ExtResource("6_1u0sp")]
+position = Vector2(3, -123)
+
+[node name="Aristo" parent="Characters" unique_id=831314489 instance=ExtResource("7_csqqw")]
+position = Vector2(194, 66)
+
+[node name="Npc" parent="Characters" unique_id=1714132578 instance=ExtResource("8_qofjf")]
+position = Vector2(-262, -117)
+npc_name = "Loner"
 
 [node name="BlackScreen" type="Sprite2D" parent="." unique_id=341669443]
 visible = false
 position = Vector2(2.4999895, 6.0000095)
 scale = Vector2(29.1, 585.99994)
 texture = SubResource("PlaceholderTexture2D_csqqw")
+
+[node name="Guard" parent="." unique_id=2086176646 instance=ExtResource("10_l6ukf")]
+position = Vector2(-31, 123)
