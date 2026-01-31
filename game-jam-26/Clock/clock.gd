@@ -1,6 +1,6 @@
 extends Node2D
 
-@onready var clock_hand: Sprite2D = $ClockHand
+@onready var hand_anchor: Node2D = $HandAnchor
 @onready var timer: Timer = $Timer
 @export var starting_time : float
 
@@ -19,7 +19,7 @@ func rotate_hand():
 	var time_left_percentage = (timer.time_left / starting_time) * 100
 	
 	# Then, rotate the hand by that percentage ammount
-	clock_hand.transform.rotated_local(timer.time_left)
+	hand_anchor.transform.rotated_local(timer.time_left)
 
 func end_game():
 	pass
