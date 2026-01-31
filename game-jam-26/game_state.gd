@@ -8,7 +8,8 @@ enum Masks {
 	COURTESAN,
 	STAFF,
 	GUARD,
-	DIPLOMAT
+	DIPLOMAT,
+	FOOL
 }
 
 var current_mask  = Masks.DEFAULT

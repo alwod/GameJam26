@@ -19,7 +19,7 @@ func rotate_hand():
 	var time_left_percentage = (timer.time_left / starting_time) * 100
 	
 	# Then, rotate the hand by that percentage ammount
-	hand_anchor.transform.rotated_local(timer.time_left)
+	hand_anchor.global_rotation = timer.time_left
 
 func end_game():
 	pass

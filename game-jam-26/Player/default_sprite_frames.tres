@@ -3,7 +3,7 @@
 [ext_resource type="Texture2D" uid="uid://hb342a38wjhw" path="res://Player/Player_Sprites/player_idle_down.png" id="1_kxcq1"]
 [ext_resource type="Texture2D" uid="uid://d1mn6svrqrxdc" path="res://Player/Player_Sprites/player_idle_left.png" id="2_muhoj"]
 [ext_resource type="Texture2D" uid="uid://dd57oq0q7qgm7" path="res://Player/Player_Sprites/player_idle_right.png" id="3_jis4x"]
-[ext_resource type="Texture2D" uid="uid://x1v8gdr1tvt4" path="res://Player/Player_Sprites/player_idle_up.png" id="4_kt8dm"]
+[ext_resource type="Texture2D" uid="uid://dxp1wlvdtu63i" path="res://Player/Player_Sprites/Untitled_Artwork.png" id="4_kxcq1"]
 [ext_resource type="Texture2D" uid="uid://0merncdnitiu" path="res://Player/Player_Sprites/player_down1.png" id="5_jpc3n"]
 [ext_resource type="Texture2D" uid="uid://c5y2pq3mqsicg" path="res://Player/Player_Sprites/player_down_2.png" id="6_oli1k"]
 [ext_resource type="Texture2D" uid="uid://b12633tjjhv0m" path="res://Player/Player_Sprites/player_up1.png" id="7_tak4i"]
@@ -45,7 +45,7 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("4_kt8dm")
+"texture": ExtResource("4_kxcq1")
 }],
 "loop": true,
 "name": &"idle_up",

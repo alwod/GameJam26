@@ -6,7 +6,7 @@ var is_talking : bool = false
 
 func _ready() -> void:
 	# Make sure the mask is set to the default one.
-	GameState.current_mask = GameState.Masks.DEFAULT
+	GameState.current_mask = GameState.Masks.FOOL
 	animated_sprite_2d.sprite_frames = load("res://Player/default_sprite_frames.tres")
 
 func _process(delta: float) -> void:
@@ -41,7 +41,8 @@ func _physics_process(delta: float) -> void:
 
 func check_mask() -> void:
 	#TODO This method should change the sprite depending on the mask
-	pass
+	if GameState.current_mask == GameState.Masks.DEFAULT:
+		animated_sprite_2d.sprite_frames = load("res://Player/default_sprite_frames.tres")
 
 # Change animation depending on button pressed
 func change_animation() -> void:
