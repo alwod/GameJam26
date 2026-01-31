@@ -2,6 +2,7 @@ extends CharacterBody2D
 
 @export var speed : float = 300.0
 @onready var animated_sprite_2d: AnimatedSprite2D = $AnimatedSprite2D
+@onready var audio_stream_player_2d: AudioStreamPlayer2D = $AudioStreamPlayer2D
 
 func _ready() -> void:
 	# Make sure the mask is set to the default one.
@@ -66,3 +67,7 @@ func change_animation() -> void:
 		animated_sprite_2d.play("walk_right")
 	if Input.is_action_just_released("Right"):
 		animated_sprite_2d.play("idle_right")
+
+
+func change_sound():
+	audio_stream_player_2d.stream = load("res://GGJ_Mask_SFX_Bounce/AristocratTalking-001.wav")

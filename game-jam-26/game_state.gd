@@ -25,6 +25,11 @@ var intro_resume_music : bool = false
 
 var start_game : bool = false
 
-var event_accuse : bool = false
+var event_bad_accuse : bool = false
+var display_bad_accuse : bool = false
+
 var event_game_over : bool = false
+var display_game_over : bool = false
+
 var event_game_win : bool = false
+var display_game_win : bool = false

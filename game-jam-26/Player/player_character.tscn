@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://cfpbwa6vl8dex" path="res://Player/player.gd" id="1_5cwa8"]
 [ext_resource type="SpriteFrames" uid="uid://0er7wv8xict1" path="res://Player/default_sprite_frames.tres" id="2_5cwa8"]
+[ext_resource type="AudioStream" uid="uid://dbxqduj0f08py" path="res://GGJ_Mask_SFX_Bounce/JesterTalking-001.wav" id="3_a5bt4"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_5cwa8"]
 
@@ -21,3 +22,9 @@ frame_progress = 0.28214854
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=483730963]
 zoom = Vector2(0.745, 0.745)
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="." unique_id=779080964]
+stream = ExtResource("3_a5bt4")
+
+[node name="AudioListener2D" type="AudioListener2D" parent="." unique_id=736545849]
+current = true

@@ -69,7 +69,7 @@ Interact={
 
 [internationalization]
 
-locale/translations_pot_files=PackedStringArray("res://Dialogue/test_dialogue.dialogue", "res://Dialogue/intro.dialogue", "res://Dialogue/king.dialogue", "res://Dialogue/aristocrat.dialogue", "res://Dialogue/band.dialogue", "res://Dialogue/courtesan.dialogue", "res://Dialogue/diplomat.dialogue", "res://Dialogue/guard.dialogue", "res://Dialogue/loner.dialogue", "res://Dialogue/staff.dialogue")
+locale/translations_pot_files=PackedStringArray("res://Dialogue/test_dialogue.dialogue", "res://Dialogue/intro.dialogue", "res://Dialogue/king.dialogue", "res://Dialogue/aristocrat.dialogue", "res://Dialogue/band.dialogue", "res://Dialogue/courtesan.dialogue", "res://Dialogue/diplomat.dialogue", "res://Dialogue/guard.dialogue", "res://Dialogue/loner.dialogue", "res://Dialogue/staff.dialogue", "res://Dialogue/victim.dialogue", "res://Dialogue/out_of_time.dialogue")
 
 [physics]
 

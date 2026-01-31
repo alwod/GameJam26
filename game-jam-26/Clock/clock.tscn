@@ -11,6 +11,7 @@ starting_time = 10.0
 
 [node name="Timer" type="Timer" parent="." unique_id=545136534]
 wait_time = 10.0
+one_shot = true
 
 [node name="ClockFace" type="Sprite2D" parent="." unique_id=1254519464]
 texture = ExtResource("2_7yix1")

@@ -8,6 +8,7 @@
 [ext_resource type="PackedScene" uid="uid://bhevcq3qo3ms0" path="res://Clock/clock.tscn" id="5_3ovin"]
 [ext_resource type="PackedScene" uid="uid://5mwan631l2hv" path="res://NPCs/Victim/victim.tscn" id="5_4g07b"]
 [ext_resource type="PackedScene" uid="uid://bd7qecn0uk8dw" path="res://NPCs/King/king.tscn" id="6_1u0sp"]
+[ext_resource type="Resource" uid="uid://dd7y5ueb4ysnb" path="res://Dialogue/victim.dialogue" id="6_vi51s"]
 [ext_resource type="PackedScene" uid="uid://dn0p5c6aoptts" path="res://NPCs/Aristrocrat/aristo.tscn" id="7_csqqw"]
 [ext_resource type="Resource" uid="uid://dwbia3o8twcki" path="res://Dialogue/aristocrat.dialogue" id="8_e1x5k"]
 [ext_resource type="PackedScene" uid="uid://bv33xxfpfpht2" path="res://NPCs/Loner/loner.tscn" id="8_qofjf"]
@@ -48,11 +49,13 @@ scale = Vector2(1.485, 18.19)
 [node name="Clock" parent="Background" unique_id=741243204 instance=ExtResource("5_3ovin")]
 position = Vector2(-133, -190.00002)
 scale = Vector2(0.54, 0.54)
+starting_time = 30.015
 
 [node name="Characters" type="Node2D" parent="." unique_id=1495838367]
 
 [node name="Victim" parent="Characters" unique_id=886347027 instance=ExtResource("5_4g07b")]
 position = Vector2(-64, -79)
+dialogue = ExtResource("6_vi51s")
 
 [node name="King" parent="Characters" unique_id=436551178 instance=ExtResource("6_1u0sp")]
 position = Vector2(5, -159)

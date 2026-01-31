@@ -10,6 +10,9 @@ func _process(delta: float) -> void:
 	if GameState.start_game:
 		timer.start(starting_time)
 		GameState.start_game = false
+	if GameState.event_bad_accuse || GameState.event_game_win:
+		print("Got here")
+		timer.stop()
 
 func rotate_hand():
 	# First, convert time left into a percentage
