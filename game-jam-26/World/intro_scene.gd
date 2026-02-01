@@ -10,9 +10,14 @@ extends Node2D
 
 var scene = preload("res://World/hacky_intermediate_scene.tscn").instantiate()
 
+const BALOON = preload("res://Dialogue/balloon.tscn")
+
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	DialogueManager.show_example_dialogue_balloon(load("res://Dialogue/intro.dialogue"), "start")
+	var baloon: Node = BALOON.instantiate()
+	get_tree().current_scene.add_child(baloon)
+	baloon.start(load("res://Dialogue/intro.dialogue"), "start")
+	#DialogueManager.show_example_dialogue_balloon(load("res://Dialogue/intro.dialogue"), "start")
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frasme.
@@ -61,18 +66,27 @@ func resume_music() -> void:
 func bad_ending_one() -> void:
 	
 	black_screen.visible = true
-	DialogueManager.show_example_dialogue_balloon(load("res://Dialogue/out_of_time.dialogue"), "wrong_accuse")
+	var baloon: Node = BALOON.instantiate()
+	get_tree().current_scene.add_child(baloon)
+	baloon.start(load("res://Dialogue/out_of_time.dialogue"), "wrong_accuse")
+	#DialogueManager.show_example_dialogue_balloon(load("res://Dialogue/out_of_time.dialogue"), "wrong_accuse")
 	GameState.event_bad_accuse = false
 	
 func bad_ending_two() -> void:
 	black_screen.visible = true
 	# Out of time dialogue
-	DialogueManager.show_example_dialogue_balloon(load("res://Dialogue/out_of_time.dialogue"), "start")
+	var baloon: Node = BALOON.instantiate()
+	get_tree().current_scene.add_child(baloon)
+	baloon.start(load("res://Dialogue/out_of_time.dialogue"), "start")
+	#DialogueManager.show_example_dialogue_balloon(load("res://Dialogue/out_of_time.dialogue"), "start")
 	GameState.event_game_over = false
 	
 func good_ending() -> void:
 	black_screen.visible = true
-	DialogueManager.show_example_dialogue_balloon(load("res://Dialogue/out_of_time.dialogue"), "correct")
+	var baloon: Node = BALOON.instantiate()
+	get_tree().current_scene.add_child(baloon)
+	baloon.start(load("res://Dialogue/out_of_time.dialogue"), "correct")
+	#DialogueManager.show_example_dialogue_balloon(load("res://Dialogue/out_of_time.dialogue"), "correct")
 	GameState.event_game_win = false
 	
 func display_bad_ending_one() -> void:
