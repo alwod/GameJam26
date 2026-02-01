@@ -17,8 +17,8 @@ The Loner: And so the fool comes to me. Have you figured it out yet?
 	- But I could die!
 		The Loner: Exciting, isn’t it? That moment between life and death when you’re clawing desperately to try and escape your fate. Listen to the music, fool. Your song is already written. Tonight will be your final symphony. Or maybe you’ll figure it out. Do you have an encore in you, jester?
 		=> iq_ok
-	- You're a dick.
-		The Loner: You have so few friends tonight. Maybe I’m your only one. Don’t lose what you can’t afford to live without.
+	- You absolute stewed prune.
+		The Loner: Your jester chatter has no effect on me. Besides, you have so few friends tonight, don’t lose what you can’t afford to live without.
 		=> iq_ok
 - Is it you? Are you the one trying to kill me?
 	The Loner: If I was, I wouldn’t have been fooled by you playing dress up with your new friend.
@@ -26,7 +26,7 @@ The Loner: And so the fool comes to me. Have you figured it out yet?
 		The Loner: So tell the King it was me. Let’s light this candle and see where it takes us.
 		=> end_title
 	- What did you see? You must know something!
-		The Loner: To be garrotted is a nasty way to go. Steel core wire. Ouch. Watch your neck – the killer could have as many as three more tries.
+		The Loner: To be garrotted is a nasty way to go. Steel core wire. Easy to hide. Ouch. Watch your neck – the killer could have as many as three more tries.
 		=> iq_ok
 - Nobody will talk to me because of these stupid masks!
 	The Loner: The masks are your opportunity. Just because they turn their nose up at one mask, doesn’t mean they’ll act like that for all of them. Nobody knows who you are under there. Nobody except you, me, and your killer. Get me some dirt on the diplomats – what their weaknesses or secrets are – and I’ll get you a way in to talk to those aristocratic pieces of shit.
