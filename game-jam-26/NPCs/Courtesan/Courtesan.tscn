@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://loryqrcp5m6k"]
 
 [ext_resource type="Script" uid="uid://cb4xq6kvud1ig" path="res://NPCs/npc.gd" id="1_pxpll"]
-[ext_resource type="Texture2D" uid="uid://bo5rvymaw5p0u" path="res://icon.svg" id="2_14yas"]
+[ext_resource type="Texture2D" uid="uid://itxvxnq0melf" path="res://NPCs/Courtesan/Courtesan_sprite.png" id="2_6xblp"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_vxakg"]
 
@@ -9,7 +9,7 @@
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("2_14yas")
+"texture": ExtResource("2_6xblp")
 }],
 "loop": true,
 "name": &"default",
