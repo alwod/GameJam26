@@ -11,6 +11,7 @@ set GameState.is_talking = false
 => END
 
 ~ bad_mask
+set GameState.play_wrong_mask_sound = true
 Jovial Jeevington: Why aren’t you working? Get back to entertaining these swine before I have you flogged with the cooks rolling pin!!
 => end_title
 
@@ -29,6 +30,7 @@ Jovial Jeevington: Greetings. How may I help you?
 
 
 ~ good_mask
+set GameState.play_correct_mask_sound = true
 Jovial Jeevington: Goooooood eveeening. And how may I assist you tonight in any way at all?
 ~ iq_good
 - Have the staff been behaving tonight?

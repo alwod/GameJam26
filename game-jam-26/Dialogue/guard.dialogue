@@ -11,6 +11,7 @@ set GameState.is_talking = false
 => END
 
 ~ bad_mask
+set GameState.play_wrong_mask_sound = true
 Commander Cuthbert: We’re on duty. Get lost!.
 => end_title
 
@@ -29,6 +30,7 @@ Commander Cuthbert: What is it? If you have something to say, make it quick.
 
 
 ~ good_mask
+set GameState.play_correct_mask_sound = true
 Commander Cuthbert: Evening. How can I help?
 ~ iq_good
 - Is everything up to scratch this evening?
