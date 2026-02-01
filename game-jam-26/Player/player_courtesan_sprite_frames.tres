@@ -7,8 +7,16 @@
 [ext_resource type="Texture2D" uid="uid://g2lx7c1k0rkn" path="res://Player/Player_Sprites/Player Courtisan Sprite/Player_Courtisan_Right.png" id="4_shogm"]
 [ext_resource type="Texture2D" uid="uid://r6his6dcsikh" path="res://Player/Player_Sprites/Player Courtisan Sprite/Player_Courtisan_Down2.png" id="6_duc64"]
 [ext_resource type="Texture2D" uid="uid://duwdix8tywhjg" path="res://Player/Player_Sprites/Player Courtisan Sprite/Player_Courtisan_Idle.png" id="7_1swhh"]
+[ext_resource type="Texture2D" uid="uid://b5jr5f5x6ry43" path="res://Player/Player_Sprites/Player Courtisan Sprite/Cort_LR_Sprite/Cort_R_1.png" id="8_dombx"]
+[ext_resource type="Texture2D" uid="uid://x0yfmgksn8ai" path="res://Player/Player_Sprites/Player Courtisan Sprite/Cort_LR_Sprite/Cort_R_2.png" id="9_4mtn0"]
+[ext_resource type="Texture2D" uid="uid://c1qb4rgohxvp1" path="res://Player/Player_Sprites/Player Courtisan Sprite/Cort_LR_Sprite/Cort_R_2_.png" id="10_dnn6p"]
+[ext_resource type="Texture2D" uid="uid://c1mxvh3dna0i1" path="res://Player/Player_Sprites/Player Courtisan Sprite/Cort_LR_Sprite/Cort_R_4.png" id="11_ilvhn"]
 [ext_resource type="Texture2D" uid="uid://b12633tjjhv0m" path="res://Player/Player_Sprites/player_up1.png" id="11_jo1a5"]
 [ext_resource type="Texture2D" uid="uid://bvdp6rauxo3bd" path="res://Player/Player_Sprites/player_up2.png" id="12_0t3gm"]
+[ext_resource type="Texture2D" uid="uid://ck6txpx6igvo7" path="res://Player/Player_Sprites/Player Courtisan Sprite/Cort_LR_Sprite/Cort_L_1.png" id="12_q4bit"]
+[ext_resource type="Texture2D" uid="uid://cbek2okocf3y0" path="res://Player/Player_Sprites/Player Courtisan Sprite/Cort_LR_Sprite/Cort_L_2.png" id="13_jo1a5"]
+[ext_resource type="Texture2D" uid="uid://bcl4w4nxr0qbf" path="res://Player/Player_Sprites/Player Courtisan Sprite/Cort_LR_Sprite/Cort_L_3.png" id="14_0t3gm"]
+[ext_resource type="Texture2D" uid="uid://dnger3oagxxi1" path="res://Player/Player_Sprites/Player Courtisan Sprite/Cort_LR_Sprite/Cort_L_4.png" id="15_8fd7t"]
 
 [resource]
 animations = [{
@@ -68,7 +76,16 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("3_spgwh")
+"texture": ExtResource("8_dombx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_4mtn0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_dnn6p")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_ilvhn")
 }],
 "loop": true,
 "name": &"walk_left",
@@ -76,7 +93,16 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("4_shogm")
+"texture": ExtResource("12_q4bit")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_jo1a5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_0t3gm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_8fd7t")
 }],
 "loop": true,
 "name": &"walk_right",
