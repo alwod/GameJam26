@@ -16,21 +16,14 @@ func _physics_process(delta: float) -> void:
 	# Don't move the character during dialogue
 	if !GameState.is_talking:
 		change_animation()
-	
-		#Move player up or down
-		var vert_direction := Input.get_axis("Up","Down")
-		if vert_direction:
-			velocity.y = vert_direction * speed
-		else:
-			velocity.y = move_toward(velocity.y, 0, speed)
-
-		# Move player left and right
-		var horiz_direction := Input.get_axis("Left", "Right")
-		if horiz_direction:
-			velocity.x = horiz_direction * speed
+		
+		# Simplified movement
+		var direction := Input.get_vector("Left", "Right", "Up", "Down")
+		if direction:
+			velocity = direction * speed
 		else:
 			velocity.x = move_toward(velocity.x, 0, speed)
-
+			velocity.y = move_toward(velocity.y, 0, speed)
 		move_and_slide()
 
 func check_mask() -> void:
@@ -43,30 +36,34 @@ func check_mask() -> void:
 
 # Change animation depending on button pressed
 func change_animation() -> void:
-	#TODO could use some polish
-	# Player is moving up
-	if Input.is_action_just_pressed("Up"):
-		animated_sprite_2d.play("walk_up")
-	if Input.is_action_just_released("Up"):
-		animated_sprite_2d.play("idle_up")
-	
-	# Player is moving down
-	if Input.is_action_just_pressed("Down"):
-		animated_sprite_2d.play("walk_down")
-	if Input.is_action_just_released("Down"):
-		animated_sprite_2d.play("idle_down")
-	
-	# Player is moving left
-	if Input.is_action_just_pressed("Left"):
-		animated_sprite_2d.play("walk_left")
-	if Input.is_action_just_released("Left"):
-		animated_sprite_2d.play("idle_left")
-	
-	# Player is moving right
-	if Input.is_action_just_pressed("Right"):
-		animated_sprite_2d.play("walk_right")
-	if Input.is_action_just_released("Right"):
-		animated_sprite_2d.play("idle_right")
+	if velocity.length() > 0:
+		animated_sprite_2d.play()
+		
+		# Player is moving up
+		if velocity.y < 0:
+			animated_sprite_2d.animation = "walk_up"
+		# Walking down
+		if velocity.y > 0:
+			animated_sprite_2d.animation = "walk_down"
+		# Walking left
+		if velocity.x < 0:
+			animated_sprite_2d.animation = "walk_left"
+		# Walking right
+		if velocity.x > 0:
+			animated_sprite_2d.animation = "walk_right"
+		
+	# Set idle sprite
+	else:
+		animated_sprite_2d.stop()
+		
+		if Input.is_action_just_released("Up"):
+			animated_sprite_2d.animation = "idle_up"
+		elif Input.is_action_just_released("Down"):
+			animated_sprite_2d.animation = "idle_down"
+		elif Input.is_action_just_released("Left"):
+			animated_sprite_2d.animation = "idle_left"
+		elif Input.is_action_just_released("Right"):
+			animated_sprite_2d.animation = "idle_right"
 
 
 func change_sound():

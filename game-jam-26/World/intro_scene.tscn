@@ -55,7 +55,7 @@ scale = Vector2(1.485, 18.19)
 [node name="Clock" parent="Background" unique_id=741243204 instance=ExtResource("5_3ovin")]
 position = Vector2(-133, -190.00002)
 scale = Vector2(0.54, 0.54)
-starting_time = 30.015
+starting_time = 300.0
 
 [node name="Characters" type="Node2D" parent="." unique_id=1495838367]
 
