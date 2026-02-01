@@ -16,7 +16,11 @@
 [ext_resource type="Resource" uid="uid://ct2fqp4mfubtq" path="res://Dialogue/loner.dialogue" id="10_vi51s"]
 [ext_resource type="Resource" uid="uid://8gebwlqmgvsm" path="res://Dialogue/diplomat.dialogue" id="12_v0sf3"]
 [ext_resource type="Resource" uid="uid://cwrslp7nqf1nf" path="res://Dialogue/guard.dialogue" id="14_bpi65"]
+[ext_resource type="Texture2D" uid="uid://c7kwfgo68r5l2" path="res://World/Jail_Ending.png" id="17_bpi65"]
 [ext_resource type="Texture2D" uid="uid://cmy62ejnebshb" path="res://World/Untitled_Artwork 3.png" id="17_v0sf3"]
+[ext_resource type="Resource" uid="uid://brib5v6lhu4pv" path="res://Dialogue/band.dialogue" id="18_hyj8d"]
+[ext_resource type="PackedScene" uid="uid://c6drnlvege1dv" path="res://NPCs/Band/band.tscn" id="19_o1l8h"]
+[ext_resource type="PackedScene" uid="uid://loryqrcp5m6k" path="res://NPCs/Courtesan/Courtesan.tscn" id="19_rw3q0"]
 
 [sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_csqqw"]
 size = Vector2(30, 1)
@@ -82,6 +86,14 @@ dialogue = ExtResource("14_bpi65")
 position = Vector2(21, -75)
 speed = 200.0
 
+[node name="Band" parent="Characters" unique_id=1005610093 instance=ExtResource("19_o1l8h")]
+position = Vector2(-196, 94)
+dialogue = ExtResource("18_hyj8d")
+is_evil = true
+
+[node name="Courtesan" parent="Characters" unique_id=762064746 instance=ExtResource("19_rw3q0")]
+position = Vector2(87, 99)
+
 [node name="BlackScreen" type="Sprite2D" parent="." unique_id=341669443]
 visible = false
 position = Vector2(-310.5, 106.99999)
@@ -90,6 +102,9 @@ texture = SubResource("PlaceholderTexture2D_csqqw")
 
 [node name="GameOver1" type="Sprite2D" parent="." unique_id=2032125832]
 visible = false
+position = Vector2(-1, 1)
+scale = Vector2(0.334375, 0.33611113)
+texture = ExtResource("17_bpi65")
 
 [node name="GameOver2" type="Sprite2D" parent="." unique_id=1617341642]
 visible = false
