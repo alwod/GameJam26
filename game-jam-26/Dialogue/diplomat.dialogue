@@ -47,7 +47,7 @@ Juhani Jääskeläinen: Oikein paljon onnea sinulle, ystäväni!
 		Juhani Jääskeläinen: Tämä on hauska! Finally, a joke! Nobody laughs here. Very sad. Laughter is the balm for the heart! Olemme aina rehellisiä. What would you like to know?
 		~ iq_good_2
 		- Tell me about your people.
-			Juhani Jääskeläinen: We come from a healthy, happy land across what you call the Tireless Sea. Our land is full of many beautiful green hills, mountains as far as the eye can see, and a tundra that guards the truest treasure of our nation. We like the peace of our home. We hope you like it too. Kaipaan kotiani niin paljon.
+			Juhani Jääskeläinen: We come from a healthy, happy land across what you call the Tireless Sea. Our land is full of many beautiful green hills, mountains as far as the eye can see, and a tundra that guards the truest treasure of our nation. We like the peace of our home. We hope you like it too. Kaipaan kotiani niin paljon..
 			set GameState.has_info_for_loner = true
 			=> iq_good_2
 		- Why are you here?

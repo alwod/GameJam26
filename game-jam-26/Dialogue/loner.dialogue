@@ -26,7 +26,7 @@ The Loner: And so the fool comes to me. Have you figured it out yet?
 		The Loner: So tell the King it was me. Let’s light this candle and see where it takes us.
 		=> end_title
 	- What did you see? You must know something!
-		The Loner: To be garrotted is a nasty way to go. Steel core wire. Easy to hide. Ouch. Watch your neck – the killer could have as many as three more tries.
+		The Loner: To be garrotted is a nasty way to go. Steel core wire. Easy to hide. Ouch. Watch your neck – the killer could have many more tries.
 		=> iq_ok
 - Nobody will talk to me because of these stupid masks!
 	The Loner: The masks are your opportunity. Just because they turn their nose up at one mask, doesn’t mean they’ll act like that for all of them. Nobody knows who you are under there. Nobody except you, me, and your killer. Get me some dirt on the diplomats – what their weaknesses or secrets are – and I’ll get you a way in to talk to those aristocratic pieces of shit.
