@@ -10,6 +10,7 @@ extends Node2D
 
 @onready var audio_bgm: AudioStreamPlayer2D = $audio_BGM
 @onready var audio_intro_events: AudioStreamPlayer2D = $audio_IntroEvents
+@onready var audio_mask: AudioStreamPlayer2D = $audio_mask
 
 
 
@@ -134,4 +135,5 @@ func _on_button_pressed() -> void:
 		get_tree().change_scene_to_file("res://World/hacky_intermediate_scene.tscn")
 
 func play_mask_sound(sound : AudioStream):
-	pass
+	audio_mask.stream = sound
+	audio_mask.play()

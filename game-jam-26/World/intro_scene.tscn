@@ -77,7 +77,7 @@ position = Vector2(198, -161)
 texture = ExtResource("27_a2sxg")
 
 [node name="AristoMask" parent="Background" unique_id=1357302958 instance=ExtResource("28_h6ak2")]
-position = Vector2(167, -141)
+position = Vector2(151, -118)
 
 [node name="CourteMask" parent="Background" unique_id=1872287740 instance=ExtResource("29_b7jps")]
 position = Vector2(164, -23)
@@ -115,7 +115,7 @@ position = Vector2(-31, 123)
 dialogue = ExtResource("14_bpi65")
 
 [node name="Player" parent="Characters" unique_id=811081228 instance=ExtResource("3_qdmss")]
-position = Vector2(21, -75)
+position = Vector2(33, -60)
 speed = 200.0
 
 [node name="Band" parent="Characters" unique_id=1005610093 instance=ExtResource("19_o1l8h")]
@@ -177,5 +177,7 @@ stream = ExtResource("32_b7jps")
 
 [node name="audio_clock" type="AudioStreamPlayer2D" parent="." unique_id=670626001]
 stream = ExtResource("33_t5w3c")
+
+[node name="audio_mask" type="AudioStreamPlayer2D" parent="." unique_id=2119037986]
 
 [connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
