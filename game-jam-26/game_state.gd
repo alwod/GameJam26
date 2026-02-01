@@ -33,3 +33,5 @@ var display_game_over : bool = false
 
 var event_game_win : bool = false
 var display_game_win : bool = false
+
+var has_info_for_loner : bool = false

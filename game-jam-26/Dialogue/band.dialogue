@@ -37,7 +37,7 @@ Gimble: Hey! How’s our set doing? You look well!
 		=> iq_ok
 - Goodbye!
 	Gimble: See you around, mate! Have one on me!
-	=> END 
+	=> end_title
 
 
 ~ good_mask

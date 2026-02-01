@@ -1,5 +1,17 @@
 ~ start
 set GameState.is_talking = true
+=> ok_mask
 
+~ end_title
 set GameState.is_talking = false
 => END
+
+~ bad_mask
+=> end_title
+
+~ ok_mask
+=> end_title
+
+
+~ good_mask
+=> end_title
