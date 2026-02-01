@@ -29,6 +29,7 @@ animation = &"walk_down"
 frame_progress = 0.28214854
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=483730963]
+ignore_rotation = false
 zoom = Vector2(0.745, 0.745)
 
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="." unique_id=779080964]

@@ -2,16 +2,26 @@
 
 importer="texture"
 type="CompressedTexture2D"
+<<<<<<<< HEAD:game-jam-26/World/intro_background.png.import
 uid="uid://drlueaafmoe7x"
 path="res://.godot/imported/intro_background.png-757713b382c7daa533533ec713cb4535.ctex"
+========
+uid="uid://bk458yiilk10g"
+path="res://.godot/imported/gimble_sprite.png-0eb55abb68e4f9d8622d873f21e3229b.ctex"
+>>>>>>>> main:game-jam-26/NPCs/Band/gimble_sprite.png.import
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
+<<<<<<<< HEAD:game-jam-26/World/intro_background.png.import
 source_file="res://World/intro_background.png"
 dest_files=["res://.godot/imported/intro_background.png-757713b382c7daa533533ec713cb4535.ctex"]
+========
+source_file="res://NPCs/Band/gimble_sprite.png"
+dest_files=["res://.godot/imported/gimble_sprite.png-0eb55abb68e4f9d8622d873f21e3229b.ctex"]
+>>>>>>>> main:game-jam-26/NPCs/Band/gimble_sprite.png.import
 
 [params]
 

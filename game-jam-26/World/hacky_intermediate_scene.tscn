@@ -1,0 +1,6 @@
+[gd_scene format=3 uid="uid://dn67llvoetlnx"]
+
+[ext_resource type="Script" uid="uid://bn5ibl8jvc1rv" path="res://World/hacky_intermediate_scene.gd" id="1_u7uua"]
+
+[node name="Node" type="Node" unique_id=1065925007]
+script = ExtResource("1_u7uua")

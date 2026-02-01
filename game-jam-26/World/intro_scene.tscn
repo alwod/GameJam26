@@ -16,6 +16,12 @@
 [ext_resource type="Resource" uid="uid://ct2fqp4mfubtq" path="res://Dialogue/loner.dialogue" id="10_vi51s"]
 [ext_resource type="Resource" uid="uid://8gebwlqmgvsm" path="res://Dialogue/diplomat.dialogue" id="12_v0sf3"]
 [ext_resource type="Resource" uid="uid://cwrslp7nqf1nf" path="res://Dialogue/guard.dialogue" id="14_bpi65"]
+[ext_resource type="Texture2D" uid="uid://c7kwfgo68r5l2" path="res://World/Jail_Ending.png" id="17_bpi65"]
+[ext_resource type="Texture2D" uid="uid://cmy62ejnebshb" path="res://World/Untitled_Artwork 3.png" id="17_v0sf3"]
+[ext_resource type="Resource" uid="uid://brib5v6lhu4pv" path="res://Dialogue/band.dialogue" id="18_hyj8d"]
+[ext_resource type="PackedScene" uid="uid://c6drnlvege1dv" path="res://NPCs/Band/band.tscn" id="19_o1l8h"]
+[ext_resource type="PackedScene" uid="uid://loryqrcp5m6k" path="res://NPCs/Courtesan/Courtesan.tscn" id="19_rw3q0"]
+[ext_resource type="Resource" uid="uid://d2lmhmm452fmd" path="res://Dialogue/courtesan.dialogue" id="20_moeg8"]
 
 [sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_csqqw"]
 size = Vector2(30, 1)
@@ -49,7 +55,7 @@ scale = Vector2(1.485, 18.19)
 [node name="Clock" parent="Background" unique_id=741243204 instance=ExtResource("5_3ovin")]
 position = Vector2(-133, -190.00002)
 scale = Vector2(0.54, 0.54)
-starting_time = 30.015
+starting_time = 300.0
 
 [node name="Characters" type="Node2D" parent="." unique_id=1495838367]
 
@@ -78,13 +84,50 @@ position = Vector2(-31, 123)
 dialogue = ExtResource("14_bpi65")
 
 [node name="Player" parent="Characters" unique_id=811081228 instance=ExtResource("3_qdmss")]
-position = Vector2(62, -77)
+position = Vector2(21, -75)
 speed = 200.0
+
+[node name="Band" parent="Characters" unique_id=1005610093 instance=ExtResource("19_o1l8h")]
+position = Vector2(-196, 94)
+dialogue = ExtResource("18_hyj8d")
+is_evil = true
+
+[node name="Courtesan" parent="Characters" unique_id=762064746 instance=ExtResource("19_rw3q0")]
+position = Vector2(87, 99)
+dialogue = ExtResource("20_moeg8")
 
 [node name="BlackScreen" type="Sprite2D" parent="." unique_id=341669443]
 visible = false
-position = Vector2(2.4999895, 6.0000095)
-scale = Vector2(29.1, 585.99994)
+position = Vector2(-310.5, 106.99999)
+scale = Vector2(49.966667, 787.9999)
 texture = SubResource("PlaceholderTexture2D_csqqw")
 
-[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="." unique_id=937278306]
+[node name="GameOver1" type="Sprite2D" parent="." unique_id=2032125832]
+visible = false
+position = Vector2(-1, 1)
+scale = Vector2(0.334375, 0.33611113)
+texture = ExtResource("17_bpi65")
+
+[node name="GameOver2" type="Sprite2D" parent="." unique_id=1617341642]
+visible = false
+position = Vector2(-0.499997, 1.0000025)
+scale = Vector2(0.3382812, 0.34444445)
+texture = ExtResource("17_v0sf3")
+
+[node name="GameWin" type="Sprite2D" parent="." unique_id=629591657]
+visible = false
+
+[node name="Button" type="Button" parent="." unique_id=1268374830]
+visible = false
+offset_left = -201.0
+offset_top = 40.0
+offset_right = -44.0
+offset_bottom = 86.0
+theme_override_colors/icon_normal_color = Color(1, 1, 1, 0)
+theme_override_colors/icon_focus_color = Color(1, 1, 1, 0)
+theme_override_colors/icon_pressed_color = Color(1, 1, 1, 0)
+theme_override_colors/icon_hover_color = Color(1, 1, 1, 0)
+theme_override_colors/icon_hover_pressed_color = Color(1, 1, 1, 0)
+theme_override_colors/icon_disabled_color = Color(1, 1, 1, 0.4)
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

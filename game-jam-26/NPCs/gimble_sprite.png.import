@@ -2,16 +2,26 @@
 
 importer="texture"
 type="CompressedTexture2D"
+<<<<<<<< HEAD:game-jam-26/NPCs/gimble_sprite.png.import
 uid="uid://bk458yiilk10g"
 path="res://.godot/imported/gimble_sprite.png-ade73d646304c6506b8db60891ea40a1.ctex"
+========
+uid="uid://c7kwfgo68r5l2"
+path="res://.godot/imported/Jail_Ending.png-ff021714d04f28ebad4be4124ac2672c.ctex"
+>>>>>>>> main:game-jam-26/World/Jail_Ending.png.import
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
+<<<<<<<< HEAD:game-jam-26/NPCs/gimble_sprite.png.import
 source_file="res://NPCs/gimble_sprite.png"
 dest_files=["res://.godot/imported/gimble_sprite.png-ade73d646304c6506b8db60891ea40a1.ctex"]
+========
+source_file="res://World/Jail_Ending.png"
+dest_files=["res://.godot/imported/Jail_Ending.png-ff021714d04f28ebad4be4124ac2672c.ctex"]
+>>>>>>>> main:game-jam-26/World/Jail_Ending.png.import
 
 [params]
 
