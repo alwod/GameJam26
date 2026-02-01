@@ -12,7 +12,7 @@ set GameState.is_talking = false
 => END
 
 ~ bad_mask
-Abigail van Eelie: Not today, yeah? We don’t cater to your type.
+Abigail van Eelie: Not today, darling. We don’t cater to your type.
 => end_title
 
 ~ ok_mask

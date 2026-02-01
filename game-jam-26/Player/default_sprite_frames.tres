@@ -71,13 +71,13 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
+"texture": ExtResource("9_2u81b")
+}, {
+"duration": 1.0,
 "texture": ExtResource("3_oli1k")
 }, {
 "duration": 1.0,
 "texture": ExtResource("8_kvkxw")
-}, {
-"duration": 1.0,
-"texture": ExtResource("9_2u81b")
 }, {
 "duration": 1.0,
 "texture": ExtResource("8_kvkxw")
