@@ -27,10 +27,10 @@
 [ext_resource type="Resource" uid="uid://derd8sh4m5c8n" path="res://Dialogue/staff.dialogue" id="22_c6hpv"]
 [ext_resource type="Texture2D" uid="uid://rw475amla03h" path="res://World/Win_end screen.png" id="25_c6hpv"]
 [ext_resource type="Texture2D" uid="uid://c88d0jo3tv0io" path="res://World/Untitled_Artwork.png" id="27_a2sxg"]
-[ext_resource type="PackedScene" uid="uid://bfy0v6w26y88f" path="res://NPCs/aristo_mask.tscn" id="28_h6ak2"]
-[ext_resource type="PackedScene" uid="uid://b6itqmdb30u57" path="res://NPCs/courtesan_mask.tscn" id="29_b7jps"]
-[ext_resource type="PackedScene" uid="uid://5xjbp1d87woc" path="res://NPCs/diplomat_mask.tscn" id="30_t5w3c"]
-[ext_resource type="PackedScene" uid="uid://ceblb3nqtyh1b" path="res://NPCs/guard_mask.tscn" id="31_nnl7d"]
+[ext_resource type="PackedScene" path="res://NPCs/aristo_mask.tscn" id="28_h6ak2"]
+[ext_resource type="PackedScene" path="res://NPCs/courtesan_mask.tscn" id="29_b7jps"]
+[ext_resource type="PackedScene" path="res://NPCs/diplomat_mask.tscn" id="30_t5w3c"]
+[ext_resource type="PackedScene" path="res://NPCs/guard_mask.tscn" id="31_nnl7d"]
 
 [sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_csqqw"]
 size = Vector2(30, 1)
@@ -101,7 +101,7 @@ position = Vector2(-31, 123)
 dialogue = ExtResource("14_bpi65")
 
 [node name="Player" parent="Characters" unique_id=811081228 instance=ExtResource("3_qdmss")]
-position = Vector2(21, -75)
+position = Vector2(8, -67)
 speed = 200.0
 
 [node name="Band" parent="Characters" unique_id=1005610093 instance=ExtResource("19_o1l8h")]
