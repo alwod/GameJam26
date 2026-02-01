@@ -22,6 +22,8 @@
 [ext_resource type="PackedScene" uid="uid://c6drnlvege1dv" path="res://NPCs/Band/band.tscn" id="19_o1l8h"]
 [ext_resource type="PackedScene" uid="uid://loryqrcp5m6k" path="res://NPCs/Courtesan/Courtesan.tscn" id="19_rw3q0"]
 [ext_resource type="Resource" uid="uid://d2lmhmm452fmd" path="res://Dialogue/courtesan.dialogue" id="20_moeg8"]
+[ext_resource type="PackedScene" uid="uid://c3nolkjfhnl6r" path="res://NPCs/Staff/staff.tscn" id="21_osnpk"]
+[ext_resource type="Resource" uid="uid://derd8sh4m5c8n" path="res://Dialogue/staff.dialogue" id="22_c6hpv"]
 
 [sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_csqqw"]
 size = Vector2(30, 1)
@@ -95,6 +97,10 @@ is_evil = true
 [node name="Courtesan" parent="Characters" unique_id=762064746 instance=ExtResource("19_rw3q0")]
 position = Vector2(87, 99)
 dialogue = ExtResource("20_moeg8")
+
+[node name="Staff" parent="Characters" unique_id=384900290 instance=ExtResource("21_osnpk")]
+position = Vector2(-245, -6)
+dialogue = ExtResource("22_c6hpv")
 
 [node name="BlackScreen" type="Sprite2D" parent="." unique_id=341669443]
 visible = false
