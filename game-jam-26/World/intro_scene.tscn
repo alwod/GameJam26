@@ -9,6 +9,7 @@
 [ext_resource type="PackedScene" uid="uid://5mwan631l2hv" path="res://NPCs/Victim/victim.tscn" id="5_4g07b"]
 [ext_resource type="Texture2D" uid="uid://bqtgdrtlicnrx" path="res://World/Throne.png" id="5_601mo"]
 [ext_resource type="PackedScene" uid="uid://bd7qecn0uk8dw" path="res://NPCs/King/king.tscn" id="6_1u0sp"]
+[ext_resource type="Texture2D" uid="uid://d0r8uki0odnco" path="res://World/window.png" id="6_nnl7d"]
 [ext_resource type="Resource" uid="uid://dd7y5ueb4ysnb" path="res://Dialogue/victim.dialogue" id="6_vi51s"]
 [ext_resource type="PackedScene" uid="uid://dn0p5c6aoptts" path="res://NPCs/Aristrocrat/aristo.tscn" id="7_csqqw"]
 [ext_resource type="Resource" uid="uid://dwbia3o8twcki" path="res://Dialogue/aristocrat.dialogue" id="8_e1x5k"]
@@ -23,14 +24,14 @@
 [ext_resource type="PackedScene" uid="uid://c6drnlvege1dv" path="res://NPCs/Band/band.tscn" id="19_o1l8h"]
 [ext_resource type="PackedScene" uid="uid://loryqrcp5m6k" path="res://NPCs/Courtesan/Courtesan.tscn" id="19_rw3q0"]
 [ext_resource type="Resource" uid="uid://d2lmhmm452fmd" path="res://Dialogue/courtesan.dialogue" id="20_moeg8"]
-[ext_resource type="PackedScene" path="res://NPCs/Staff/staff.tscn" id="21_osnpk"]
+[ext_resource type="PackedScene" uid="uid://c3nolkjfhnl6r" path="res://NPCs/Staff/staff.tscn" id="21_osnpk"]
 [ext_resource type="Resource" uid="uid://derd8sh4m5c8n" path="res://Dialogue/staff.dialogue" id="22_c6hpv"]
 [ext_resource type="Texture2D" uid="uid://rw475amla03h" path="res://World/Win_end screen.png" id="25_c6hpv"]
 [ext_resource type="Texture2D" uid="uid://c88d0jo3tv0io" path="res://World/Untitled_Artwork.png" id="27_a2sxg"]
-[ext_resource type="PackedScene" uid="uid://bfy0v6w26y88f" path="res://NPCs/aristo_mask.tscn" id="28_h6ak2"]
-[ext_resource type="PackedScene" uid="uid://b6itqmdb30u57" path="res://NPCs/courtesan_mask.tscn" id="29_b7jps"]
-[ext_resource type="PackedScene" uid="uid://5xjbp1d87woc" path="res://NPCs/diplomat_mask.tscn" id="30_t5w3c"]
-[ext_resource type="PackedScene" uid="uid://ceblb3nqtyh1b" path="res://NPCs/guard_mask.tscn" id="31_nnl7d"]
+[ext_resource type="PackedScene" path="res://NPCs/aristo_mask.tscn" id="28_h6ak2"]
+[ext_resource type="PackedScene" path="res://NPCs/courtesan_mask.tscn" id="29_b7jps"]
+[ext_resource type="PackedScene" path="res://NPCs/diplomat_mask.tscn" id="30_t5w3c"]
+[ext_resource type="PackedScene" path="res://NPCs/guard_mask.tscn" id="31_nnl7d"]
 [ext_resource type="AudioStream" uid="uid://c02pptaxp70ga" path="res://GGJ_Mask_Music/Music_Background1.ogg" id="32_b7jps"]
 [ext_resource type="AudioStream" uid="uid://x2xetgbhsg4i" path="res://GGJ_Mask_Music/Music_GameOverSoon_Harpsichord.wav" id="33_t5w3c"]
 
@@ -71,6 +72,40 @@ starting_time = 300.0
 [node name="Throne" type="Sprite2D" parent="Background" unique_id=2008695285]
 position = Vector2(2, -186)
 texture = ExtResource("5_601mo")
+
+[node name="Window" type="Sprite2D" parent="Background" unique_id=1210227785]
+position = Vector2(-72, -225.00002)
+scale = Vector2(1, 0.89428574)
+texture = ExtResource("6_nnl7d")
+
+[node name="Window5" type="Sprite2D" parent="Background/Window" unique_id=102790687]
+position = Vector2(329.62497, -23.272736)
+scale = Vector2(0.72326195, 0.59025544)
+texture = ExtResource("6_nnl7d")
+
+[node name="Window6" type="Sprite2D" parent="Background/Window" unique_id=1027206045]
+position = Vector2(251.125, -23.482422)
+scale = Vector2(0.683155, 0.5990415)
+texture = ExtResource("6_nnl7d")
+
+[node name="Window" type="Sprite2D" parent="Background/Window" unique_id=845584434]
+position = Vector2(-72, -225.00002)
+scale = Vector2(1, 0.89428574)
+texture = ExtResource("6_nnl7d")
+
+[node name="Window2" type="Sprite2D" parent="Background/Window" unique_id=182273004]
+position = Vector2(136, 1.118227)
+texture = ExtResource("6_nnl7d")
+
+[node name="Window3" type="Sprite2D" parent="Background/Window" unique_id=422680135]
+position = Vector2(-120.99999, -22.364197)
+scale = Vector2(0.66577536, 0.59744406)
+texture = ExtResource("6_nnl7d")
+
+[node name="Window4" type="Sprite2D" parent="Background/Window" unique_id=694414697]
+position = Vector2(-197.99997, -22.364197)
+scale = Vector2(0.6711229, 0.58466446)
+texture = ExtResource("6_nnl7d")
 
 [node name="UntitledArtwork" type="Sprite2D" parent="Background" unique_id=622444747]
 position = Vector2(198, -161)
