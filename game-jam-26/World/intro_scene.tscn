@@ -74,6 +74,18 @@ texture = ExtResource("5_601mo")
 position = Vector2(198, -161)
 texture = ExtResource("27_a2sxg")
 
+[node name="AristoMask" parent="Background" unique_id=1357302958 instance=ExtResource("28_h6ak2")]
+position = Vector2(167, -141)
+
+[node name="CourteMask" parent="Background" unique_id=1872287740 instance=ExtResource("29_b7jps")]
+position = Vector2(164, -23)
+
+[node name="DiploMask" parent="Background" unique_id=1149344588 instance=ExtResource("30_t5w3c")]
+position = Vector2(54, 16)
+
+[node name="DiploMask2" parent="Background" unique_id=1050466326 instance=ExtResource("31_nnl7d")]
+position = Vector2(-86, 32)
+
 [node name="Characters" type="Node2D" parent="." unique_id=1495838367]
 
 [node name="Victim" parent="Characters" unique_id=886347027 instance=ExtResource("5_4g07b")]
@@ -155,17 +167,5 @@ theme_override_colors/icon_hover_pressed_color = Color(1, 1, 1, 0)
 theme_override_colors/icon_disabled_color = Color(1, 1, 1, 0.4)
 
 [node name="Node" type="Node" parent="." unique_id=1248620259]
-
-[node name="AristoMask" parent="." unique_id=1357302958 instance=ExtResource("28_h6ak2")]
-position = Vector2(167, -141)
-
-[node name="CourteMask" parent="." unique_id=1872287740 instance=ExtResource("29_b7jps")]
-position = Vector2(164, -23)
-
-[node name="DiploMask" parent="." unique_id=1149344588 instance=ExtResource("30_t5w3c")]
-position = Vector2(54, 16)
-
-[node name="DiploMask2" parent="." unique_id=1050466326 instance=ExtResource("31_nnl7d")]
-position = Vector2(-86, 32)
 
 [connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
