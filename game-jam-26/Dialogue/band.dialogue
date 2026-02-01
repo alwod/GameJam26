@@ -1,7 +1,6 @@
 ~ start
 set GameState.is_talking = true
-if GameState.current_mask == GameState.Masks.DEFAULT || GameState.current_mask == GameState.Masks.STAFF:
-	=> bad_mask
+=> ok_mask
 
 ~ end_title
 set GameState.is_talking = false
@@ -11,5 +10,34 @@ set GameState.is_talking = false
 => end_title
 
 ~ ok_mask
+Gimble: Hey! How’s our set doing? You look well!
+~ iq_ok
+- You guys are sounding great tonight!
+	Gimble: Cheers! It’s been a good night so far! Hopefully it’ll get even better! We’ve been working on some new music! Something really round off the night with!
+	You: You seen anything untoward tonight? Perfect vantage point!
+	Gimble: Yeah! Our favourite Jester hasn’t been very entertaining tonight! Are ya losing your touch?
+	- I think someone is trying to kill me! I’m looking into it!
+		Gimble: Really? Why you? You’re the King’s favourite performer! Why would anyone want to hurt you of all people?
+		- I don’t know! I’m perfect!
+			Gimble: Still not lacking in confidence, are you? Must’ve rubbed someone the wrong way.
+			=> iq_ok
+		- Do you know who it could be?
+			Gimble: If I had to guess, I’d put money on that new diplomat. I bet they don’t even have jesters where he comes from! It’s probably some weird foreign insult to him!
+			=> iq_ok
+	- Me? Never! That’s why I’m the main event now! We save the best for last in this court!
+		Gimble: Yeah. We sure do…
+		=> iq_ok
+- What’s the plan for after the night’s over? Pub as usual?
+	Gimble: I dunno, mate. I don’t think I’m really feeling it, and we’ve got this other thing we have to do. You know we’d love to, but I don’t think we can and… yeah.
+	- What the fuck, guys? You’re really leaving me to dry?
+		Gimble: Look, we’re just busy, okay? But we’ll come out with you next time!
+		=> iq_ok
+	- Fine. I’ll enjoy it more without you anyway.
+		Gimble: Sure you will. You’ll be neck deep in it by the end of the night.
+		=> iq_ok
+- Goodbye!
+	Gimble: See you around, mate! Have one on me!
+	=> END 
+
 
 ~ good_mask
