@@ -7,11 +7,43 @@ set GameState.is_talking = false
 => END
 
 ~ bad_mask
+Jovial Jeevington: Why aren’t you working? Get back to entertaining these swine before I have you flogged with the cooks rolling pin!!
 => end_title
 
 ~ ok_mask
+Jovial Jeevington: Greetings. How may I help you?
+
+- What’s been going on tonight?
+Jovial Jeevington: Only the finest night of entertainment in the kingdom! I do hope you enjoy it!
+
+- What sort of entertainment do we still have to come?
+Jovial Jeevington: Our live band is the epitome of musical entertainment throughout the land! Their encore should trounce any other!
+
+- Goodbye
+Jovial Jeevington: And a good
 => end_title
 
 
 ~ good_mask
+Jovial Jeevington: Goooooood eveeening. And how may I assist you tonight in any way at all?
+
+- Have the staff been behaving tonight?
+Jovial Jeevington: But of course! They know to behave themselves to the highest standards! As you know, the consequences are severe. Our banquet can always use one more serving after all! Especially after the previous meals lucky escape..
+- Lucky escape? What do you mean?
+Jovial Jeevington: Let’s just say our chosen dish for tonight proved to be more elusive than intended. Fear not! We intend to rectify the situation. I hear the fear makes the meat all the more tender.
+- What the fucking fuck?
+Jovial Jeevington: Oh, you’re not aware! You, umm, needn't worry yourself. We’ve been tracking a particularly elusive deer around the nearby countryside. The King has divine right to hunt all game in the kingdom so we must keep it quiet. You’re welcome to join us!
+
+- Have you seen the Jester anywhere?
+Jovial Jeevington: Oh. Him. He’s around here somewhere, shirking his duties as he always does. If you want a true laugh, just wait until the masquerade is over and throw some vegetables at him. It’d be better than the drivel he offers.
+- I'll keep that in mind.
+Jovial Jeevington: Good! I assure you that it’ll be worth your time! That Jester is a waste of kingdom resources!
+- What? Fuck you, you jumped up cattle-sniffer!
+Jovial Jeevington: YOU! Get back to work and give me that blasted mask! If you’re going to play pretend, then at least pretend to be worth the money that’s wasted on you!
+
+- Has the King truly invited someone as unknown as that hooded man to our evening of fun?
+Jovial Jeevington: It is not our place to question the wisdom of our King. However, I do wonder what the purpose of such a man is. Perhaps he may be amenable to visiting us later tonight! I’m sure he’d find the ability to be more tasteful!
+
+- Goodbye.
+Jovial Jeevington: Have the most wonderful of evenings and do be sure to join us for our usual midnight snack. I hear tonight will be a barrel of laughs!
 => end_title
