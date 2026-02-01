@@ -12,7 +12,7 @@ set GameState.is_talking = false
 => END
 
 ~ bad_mask
-Earnest Wubben-Arlington XI: “And who gave you permission to talk to us, peasant? Know your place before I have the guards teach it to you!”
+Earnest Wubben-Arlington XI: And who gave you permission to talk to us, peasant? Know your place before I have the guards teach it to you!
 => end_chat
 
 ~ ok_mask

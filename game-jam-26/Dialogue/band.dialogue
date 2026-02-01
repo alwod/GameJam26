@@ -22,7 +22,7 @@ Gimble: Hey! How’s the set sounding? You look well!
 			Gimble: Still not lacking in confidence, are you? Must’ve rubbed someone the wrong way.
 			=> iq_ok
 		- Do you know who it could be?
-			Gimble: If I had to guess, I’d put money on that new diplomat. I bet they don’t even have jesters where he comes from! It’s probably some weird foreign insult to him!
+			Gimble: If I had to guess, I’d put money on that new diplomat. I bet they don’t even have jesters where he comes from! It’s probably some weird foreign insult to him.!
 			=> iq_ok
 	- Me? Never! That’s why I’m the main event now! We save the best for last in this court!
 		Gimble: Yeah. We sure do…
