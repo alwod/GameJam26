@@ -35,3 +35,6 @@ var event_game_win : bool = false
 var display_game_win : bool = false
 
 var has_info_for_loner : bool = false
+
+var play_wrong_mask_sound : bool = false
+var play_correct_mask_sound : bool = false

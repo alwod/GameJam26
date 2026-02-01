@@ -12,6 +12,7 @@ set GameState.is_talking = false
 => END
 
 ~ bad_mask
+set GameState.play_wrong_mask_sound = true
 Juhani Jääskeläinen: Pyydän anteeksi. I am far too busy to talk in this moment.
 => end_title
 
@@ -36,6 +37,7 @@ Juhani Jääskeläinen: Terveisiä sinulle! How may I be of service? This is the
 
 
 ~ good_mask
+set GameState.play_correct_mask_sound = true
 Juhani Jääskeläinen: Oikein paljon onnea sinulle, ystäväni!
 ~ iq_good
 - Uhhhhhh…

@@ -8,6 +8,11 @@ extends Node2D
 @onready var game_win: Sprite2D = $GameWin
 @onready var button: Button = $Button
 
+@onready var audio_bgm: AudioStreamPlayer2D = $audio_BGM
+@onready var audio_intro_events: AudioStreamPlayer2D = $audio_IntroEvents
+
+
+
 var scene = preload("res://World/hacky_intermediate_scene.tscn").instantiate()
 
 const BALOON = preload("res://Dialogue/balloon.tscn")
@@ -18,7 +23,7 @@ func _ready() -> void:
 	get_tree().current_scene.add_child(baloon)
 	baloon.start(load("res://Dialogue/intro.dialogue"), "start")
 	#DialogueManager.show_example_dialogue_balloon(load("res://Dialogue/intro.dialogue"), "start")
-
+	audio_bgm.play()
 
 # Called every frame. 'delta' is the elapsed time since the previous frasme.
 func _process(delta: float) -> void:
@@ -49,12 +54,24 @@ func _process(delta: float) -> void:
 		
 	if GameState.display_game_win:
 		display_good_ending()
+		
+	if GameState.play_wrong_mask_sound:
+		play_mask_sound(load("res://GGJ_Mask_SFX_Bounce/WrongMask.wav"))
+		GameState.play_wrong_mask_sound = false
+		
+	if GameState.play_correct_mask_sound:
+		play_mask_sound(load("res://GGJ_Mask_SFX_Bounce/CorrectMask.wav"))
+		GameState.play_correct_mask_sound = false
 
 func lights_out() -> void:
+	audio_intro_events.stream = load("res://GGJ_Mask_SFX_Bounce/LightsOff.wav")
+	audio_intro_events.play()
 	black_screen.visible = true
 	GameState.intro_lights_out = false
 	
 func lights_on_again() -> void:
+	audio_intro_events.stream = load("res://GGJ_Mask_Music/Music_VictimKilled.wav")
+	audio_intro_events.play()
 	black_screen.visible = false
 	victim.global_rotation_degrees = 90.0
 	GameState.intro_lights_on = false
@@ -64,7 +81,6 @@ func resume_music() -> void:
 	
 
 func bad_ending_one() -> void:
-	
 	black_screen.visible = true
 	var baloon: Node = BALOON.instantiate()
 	get_tree().current_scene.add_child(baloon)
@@ -90,18 +106,24 @@ func good_ending() -> void:
 	GameState.event_game_win = false
 	
 func display_bad_ending_one() -> void:
+	audio_intro_events.stream = load("res://GGJ_Mask_SFX_Bounce/Death_OutOfTime.wav")
+	audio_intro_events.play()
 	GameState.display_bad_accuse = false
 	player.position = Vector2(0, 0)
 	button.visible = true
 	game_over_1.visible = true
 	
 func display_bad_ending_two() -> void:
+	audio_intro_events.stream = load("res://GGJ_Mask_SFX_Bounce/Death_OutOfTime.wav")
+	audio_intro_events.play()
 	GameState.display_game_over = false
 	player.position = Vector2(0, 0)
 	button.visible = true
 	game_over_2.visible = true
 
 func display_good_ending() -> void:
+	audio_intro_events.stream = load("res://GGJ_Mask_Music/Music_GameWin.ogg")
+	audio_intro_events.play()
 	GameState.display_game_win = false
 	player.position = Vector2(0, 0)
 	button.visible = true
@@ -110,3 +132,6 @@ func display_good_ending() -> void:
 func _on_button_pressed() -> void:
 	if (button.visible):
 		get_tree().change_scene_to_file("res://World/hacky_intermediate_scene.tscn")
+
+func play_mask_sound(sound : AudioStream):
+	pass
