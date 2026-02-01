@@ -45,7 +45,7 @@ Abigail van Eelie: Ah, finally! An interesting face! How are we tonight? How can
 	- Come on! I don’t see you as competition!
 		Abigail van Eelie: You should. You spend all day in the courts, listening to everyone who visits the King. Not only are you our competition – you may well be our fiercest rival.
 		=> iq_good
-	- Bitch. 
+	- Such eloquent words when your face could sour grapes faster than the summer sun.
 		Abigail van Eelie: Touchy touchy.
 		=> end_title
 
@@ -55,7 +55,7 @@ Abigail van Eelie: Ah, finally! An interesting face! How are we tonight? How can
 		Abigail van Eelie: There’s the golden question. Maybe they’ve seen or heard something. Maybe they’re just feeling a little downtrodden. Maybe they think the Aristocrats will try something with the diplomat. Or maybe they’re on another power trip now that they’ve been rendered obsolete.
 		=> iq_good
 	- Maybe they’re looking to cause trouble.
-		Abigail van Eelie: Perhaps. They must be wound up, trapped in here all day guarding the King, the aristocrats… the jester. Look at them. They want something to happen. They might even cause it. They hate it when their swords don’t have red on them. Who’d miss a lowly servant? A gnome? An entertainer, maybe? Who knows? Kill a nobody, blame it on a somebody, and watch the chaos ensue. Wouldn’t be the first time..
+		Abigail van Eelie: Perhaps. They must be wound up, trapped in here all day guarding the King, the aristocrats… the jester. Look at them. They want something to happen. They might even cause it just to red their swords. Who’d miss a lowly servant? A gnome? An entertainer, maybe? Who knows? Kill a nobody, blame it on a somebody, and watch the chaos ensue. Wouldn’t be the first time..
 		=> iq_good
 
 - Goodbye.
