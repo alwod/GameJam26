@@ -1,12 +1,10 @@
 ~ start
 set GameState.is_talking = true
 if GameState.current_mask == GameState.Masks.DEFAULT || GameState.current_mask == GameState.Masks.DIPLOMAT:
-	set GameState.current_mask = GameState.Masks.GUARD
 	=> bad_mask
 elif GameState.current_mask == GameState.Masks.COURTESAN || GameState.current_mask == GameState.Masks.ARISTROCRAT:
 	=> good_mask
 else:
-	set GameState.current_mask = GameState.Masks.COURTESAN
 	=> ok_mask
 
 ~ end_chat
