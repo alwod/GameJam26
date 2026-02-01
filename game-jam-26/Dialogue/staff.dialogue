@@ -1,17 +1,24 @@
 ~ start
-set GameState.is_talking = true
-=> ok_mask
+if GameState.current_mask == GameState.Masks.DEFAULT:
+	=> bad_mask
+elif GameState.current_mask == GameState.Masks.ARISTROCRAT || GameState.current_mask == GameState.Masks.GUARD:
+	=> good_mask
+else:
+	=> ok_mask
 
 ~ end_title
 set GameState.is_talking = false
 => END
 
 ~ bad_mask
+Jovial Jeevington:
 => end_title
 
 ~ ok_mask
+Jovial Jeevington:
 => end_title
 
 
 ~ good_mask
+Jovial Jeevington:
 => end_title
