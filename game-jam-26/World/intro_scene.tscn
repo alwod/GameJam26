@@ -89,7 +89,7 @@ position = Vector2(-86, 32)
 [node name="Characters" type="Node2D" parent="." unique_id=1495838367]
 
 [node name="Victim" parent="Characters" unique_id=886347027 instance=ExtResource("5_4g07b")]
-position = Vector2(-64, -79)
+position = Vector2(-80, -81)
 dialogue = ExtResource("6_vi51s")
 
 [node name="King" parent="Characters" unique_id=436551178 instance=ExtResource("6_1u0sp")]
