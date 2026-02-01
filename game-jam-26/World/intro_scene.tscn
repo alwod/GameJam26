@@ -66,6 +66,10 @@ starting_time = 300.0
 position = Vector2(2, -186)
 texture = ExtResource("5_601mo")
 
+[node name="UntitledArtwork" type="Sprite2D" parent="Background" unique_id=622444747]
+position = Vector2(198, -161)
+texture = ExtResource("27_a2sxg")
+
 [node name="Characters" type="Node2D" parent="." unique_id=1495838367]
 
 [node name="Victim" parent="Characters" unique_id=886347027 instance=ExtResource("5_4g07b")]
@@ -147,9 +151,5 @@ theme_override_colors/icon_hover_pressed_color = Color(1, 1, 1, 0)
 theme_override_colors/icon_disabled_color = Color(1, 1, 1, 0.4)
 
 [node name="Node" type="Node" parent="." unique_id=1248620259]
-
-[node name="UntitledArtwork" type="Sprite2D" parent="." unique_id=622444747]
-position = Vector2(198, -161)
-texture = ExtResource("27_a2sxg")
 
 [connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
