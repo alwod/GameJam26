@@ -12,6 +12,7 @@ set GameState.is_talking = false
 => END
 
 ~ bad_mask
+set GameState.play_wrong_mask_sound = true
 Abigail van Eelie: Not today, darling. We don’t cater to your type.
 => end_title
 
@@ -29,6 +30,7 @@ Abigail van Eelie: Lovely evening, isn’t it? What brings you over to me? Somet
 
 
 ~ good_mask
+set GameState.play_correct_mask_sound = true
 Abigail van Eelie: Ah, finally! An interesting face! How are we tonight? How can I brighten your evening?
 ~ iq_good
 - Have you noticed the Aristocrats acting up lately?
