@@ -42,12 +42,15 @@ func check_mask() -> void:
 		label.text = "Current Mask: Aristocrat"
 		
 	if GameState.current_mask == GameState.Masks.COURTESAN:
+		animated_sprite_2d.sprite_frames = load("res://Player/player_courtesan_sprite_frames.tres")
 		label.text = "Current Mask: Courtesan"
 	
 	if GameState.current_mask == GameState.Masks.DIPLOMAT:
+		animated_sprite_2d.sprite_frames = load("res://Player/player_diplo_sprite_frames.tres")
 		label.text = "Current Mask: Diplomat"
 	
 	if GameState.current_mask == GameState.Masks.GUARD:
+		animated_sprite_2d.sprite_frames = load("res://Player/player_guard_sprite_frames.tres")
 		label.text = "Current Mask: Guard"
 
 # Change animation depending on button pressed
