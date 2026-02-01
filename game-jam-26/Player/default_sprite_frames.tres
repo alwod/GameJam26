@@ -1,13 +1,17 @@
 [gd_resource type="SpriteFrames" format=3 uid="uid://0er7wv8xict1"]
 
 [ext_resource type="Texture2D" uid="uid://hb342a38wjhw" path="res://Player/Player_Sprites/player_idle_down.png" id="1_kxcq1"]
-[ext_resource type="Texture2D" uid="uid://d1mn6svrqrxdc" path="res://Player/Player_Sprites/player_idle_left.png" id="2_muhoj"]
-[ext_resource type="Texture2D" uid="uid://dd57oq0q7qgm7" path="res://Player/Player_Sprites/player_idle_right.png" id="3_jis4x"]
+[ext_resource type="Texture2D" uid="uid://cjtnhlpkiuuy2" path="res://Player/Player_Sprites/Player LR walk sprites/Basic Mask/player_basic_L2_4.png" id="3_oli1k"]
 [ext_resource type="Texture2D" uid="uid://dxp1wlvdtu63i" path="res://Player/Player_Sprites/Untitled_Artwork.png" id="4_kxcq1"]
+[ext_resource type="Texture2D" uid="uid://b0l4syav8o7ju" path="res://Player/Player_Sprites/Player LR walk sprites/Basic Mask/player_basic_R2_4.png" id="4_tak4i"]
 [ext_resource type="Texture2D" uid="uid://0merncdnitiu" path="res://Player/Player_Sprites/player_down1.png" id="5_jpc3n"]
 [ext_resource type="Texture2D" uid="uid://c5y2pq3mqsicg" path="res://Player/Player_Sprites/player_down_2.png" id="6_oli1k"]
 [ext_resource type="Texture2D" uid="uid://b12633tjjhv0m" path="res://Player/Player_Sprites/player_up1.png" id="7_tak4i"]
 [ext_resource type="Texture2D" uid="uid://bvdp6rauxo3bd" path="res://Player/Player_Sprites/player_up2.png" id="8_c8aga"]
+[ext_resource type="Texture2D" uid="uid://bh3vje2rwtu0u" path="res://Player/Player_Sprites/Player LR walk sprites/Basic Mask/player_basic_left1.png" id="8_kvkxw"]
+[ext_resource type="Texture2D" uid="uid://byaa78yfei7ns" path="res://Player/Player_Sprites/Player LR walk sprites/Basic Mask/player_basic_left3.png" id="9_2u81b"]
+[ext_resource type="Texture2D" uid="uid://d0jcq754hywyy" path="res://Player/Player_Sprites/Player LR walk sprites/Basic Mask/player_basic_R1.png" id="10_c2rb2"]
+[ext_resource type="Texture2D" uid="uid://be0yvwr4ihjdi" path="res://Player/Player_Sprites/Player LR walk sprites/Basic Mask/player_basic_R3.png" id="11_gmic6"]
 
 [resource]
 animations = [{
@@ -29,7 +33,7 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("2_muhoj")
+"texture": ExtResource("3_oli1k")
 }],
 "loop": true,
 "name": &"idle_left",
@@ -37,7 +41,7 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("3_jis4x")
+"texture": ExtResource("4_tak4i")
 }],
 "loop": true,
 "name": &"idle_right",
@@ -53,6 +57,9 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
+"texture": ExtResource("1_kxcq1")
+}, {
+"duration": 1.0,
 "texture": ExtResource("5_jpc3n")
 }, {
 "duration": 1.0,
@@ -64,7 +71,16 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("2_muhoj")
+"texture": ExtResource("3_oli1k")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_kvkxw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_2u81b")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_kvkxw")
 }],
 "loop": true,
 "name": &"walk_left",
@@ -72,7 +88,16 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("3_jis4x")
+"texture": ExtResource("10_c2rb2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_tak4i")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_gmic6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_tak4i")
 }],
 "loop": true,
 "name": &"walk_right",

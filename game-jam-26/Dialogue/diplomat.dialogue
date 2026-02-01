@@ -1,5 +1,65 @@
 ~ start
 set GameState.is_talking = true
+if GameState.current_mask == GameState.Masks.COURTESAN || GameState.current_mask == GameState.Masks.ARISTROCRAT:
+	=> bad_mask
+elif GameState.current_mask == GameState.Masks.DIPLOMAT:
+	=> good_mask
+else:
+	=> ok_mask
 
+~ end_title
 set GameState.is_talking = false
 => END
+
+~ bad_mask
+Juhani Jääskeläinen: Pyydän anteeksi. I am far too busy to talk in this moment.
+=> end_title
+
+~ ok_mask
+~ iq_ok
+Juhani Jääskeläinen: Terveisiä sinulle! How may I be of service? This is the phrase, yes?
+- What are you doing here?
+	Juhani Jääskeläinen: Rauha meidän aikanamme. We hope to create a lasting peace with your kingdom!
+	- Is it going well?
+		Juhani Jääskeläinen: I believe so. Sen täytyy mennä hyvin.
+		=> iq_ok
+	- What if it doesn’t go well. What if something happens?
+		Juhani Jääskeläinen: Ei auta itku markkinoilla. We will find another way.
+		=> iq_ok
+- Tell me about your people.
+	Juhani Jääskeläinen: We are very simple humble people who would like to stay that way. That is all you need to know, yes?
+	=> iq_ok
+- Goodbye.
+	Juhani Jääskeläinen: Hyvästi!
+	=> end_title
+=> end_title
+
+
+~ good_mask
+Juhani Jääskeläinen: Oikein paljon onnea sinulle, ystäväni!
+~ iq_good
+- Uhhhhhh…
+	Juhani Jääskeläinen: Erittäin ovela. That mask does not belong to you. What are you trying to learn?
+	- I’m trying to find a killer on the loose.
+		Juhani Jääskeläinen: Perkele. I hope they are not hunting me. I just want peace!
+		=> iq_good
+	- I’m trying to learn all your secrets to report them to the King! Muahahahaha!
+		Juhani Jääskeläinen: Tämä on hauska! Finally, a joke! Nobody laughs here. Very sad. Laughter is the balm for the heart! Olemme aina rehellisiä. What would you like to know?
+		~ iq_good_2
+		- Tell me about your people.
+			Juhani Jääskeläinen: We come from a healthy, happy land across what you call the Tireless Sea. Our land is full of many beautiful green hills, mountains as far as the eye can see, and a tundra that guards the truest treasure of our nation. We like the peace of our home. We hope you like it too. Kaipaan kotiani niin paljon..
+			set GameState.has_info_for_loner = true
+			=> iq_good_2
+		- Why are you here?
+			Juhani Jääskeläinen: Rauhaa ja hiljaisuutta. We hope to build an alliance with your King. Two friends hand in hand is better than one man alone with his hand on himself, yes? We do not wish for war for either of our lands. We hope to build a trade between us. Kansakuntanne ei selviäisi sodasta meitä vastaan.
+			=> iq_good_2
+		- Enough about that.
+			Juhani Jääskeläinen: Toivottavasti ymmärrämme toisiamme.
+			=> end_title
+- Um, mina… olen…  me?
+	Juhani Jääskeläinen: Tiedän, ettet osaa kieltäni. Kuinka pitkälle olet valmis päästämään tämän valheen menemään?
+	=> iq_good
+- Au revoir or whatever
+	Juhani Jääskeläinen: ...
+	=> end_title
+=> end_title

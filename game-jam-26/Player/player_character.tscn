@@ -25,8 +25,7 @@ shape = SubResource("RectangleShape2D_5cwa8")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1478686338]
 sprite_frames = ExtResource("2_5cwa8")
-animation = &"walk_down"
-frame_progress = 0.28214854
+animation = &"idle_down"
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=483730963]
 ignore_rotation = false

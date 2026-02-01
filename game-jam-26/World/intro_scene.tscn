@@ -7,6 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://0orgm35pkg8e" path="res://NPCs/Diplomat/diplomat.tscn" id="4_1h5m6"]
 [ext_resource type="PackedScene" uid="uid://bhevcq3qo3ms0" path="res://Clock/clock.tscn" id="5_3ovin"]
 [ext_resource type="PackedScene" uid="uid://5mwan631l2hv" path="res://NPCs/Victim/victim.tscn" id="5_4g07b"]
+[ext_resource type="Texture2D" uid="uid://bqtgdrtlicnrx" path="res://World/Throne.png" id="5_601mo"]
 [ext_resource type="PackedScene" uid="uid://bd7qecn0uk8dw" path="res://NPCs/King/king.tscn" id="6_1u0sp"]
 [ext_resource type="Resource" uid="uid://dd7y5ueb4ysnb" path="res://Dialogue/victim.dialogue" id="6_vi51s"]
 [ext_resource type="PackedScene" uid="uid://dn0p5c6aoptts" path="res://NPCs/Aristrocrat/aristo.tscn" id="7_csqqw"]
@@ -22,6 +23,10 @@
 [ext_resource type="PackedScene" uid="uid://c6drnlvege1dv" path="res://NPCs/Band/band.tscn" id="19_o1l8h"]
 [ext_resource type="PackedScene" uid="uid://loryqrcp5m6k" path="res://NPCs/Courtesan/Courtesan.tscn" id="19_rw3q0"]
 [ext_resource type="Resource" uid="uid://d2lmhmm452fmd" path="res://Dialogue/courtesan.dialogue" id="20_moeg8"]
+[ext_resource type="PackedScene" uid="uid://c3nolkjfhnl6r" path="res://NPCs/Staff/staff.tscn" id="21_osnpk"]
+[ext_resource type="Resource" uid="uid://derd8sh4m5c8n" path="res://Dialogue/staff.dialogue" id="22_c6hpv"]
+[ext_resource type="Texture2D" uid="uid://rw475amla03h" path="res://World/Win_end screen.png" id="25_c6hpv"]
+[ext_resource type="Texture2D" uid="uid://c88d0jo3tv0io" path="res://World/Untitled_Artwork.png" id="27_a2sxg"]
 
 [sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_csqqw"]
 size = Vector2(30, 1)
@@ -57,6 +62,14 @@ position = Vector2(-133, -190.00002)
 scale = Vector2(0.54, 0.54)
 starting_time = 300.0
 
+[node name="Throne" type="Sprite2D" parent="Background" unique_id=2008695285]
+position = Vector2(2, -186)
+texture = ExtResource("5_601mo")
+
+[node name="UntitledArtwork" type="Sprite2D" parent="Background" unique_id=622444747]
+position = Vector2(198, -161)
+texture = ExtResource("27_a2sxg")
+
 [node name="Characters" type="Node2D" parent="." unique_id=1495838367]
 
 [node name="Victim" parent="Characters" unique_id=886347027 instance=ExtResource("5_4g07b")]
@@ -64,7 +77,7 @@ position = Vector2(-64, -79)
 dialogue = ExtResource("6_vi51s")
 
 [node name="King" parent="Characters" unique_id=436551178 instance=ExtResource("6_1u0sp")]
-position = Vector2(5, -159)
+position = Vector2(5, -146)
 
 [node name="Aristo" parent="Characters" unique_id=831314489 instance=ExtResource("7_csqqw")]
 position = Vector2(194, 66)
@@ -96,6 +109,10 @@ is_evil = true
 position = Vector2(87, 99)
 dialogue = ExtResource("20_moeg8")
 
+[node name="Staff" parent="Characters" unique_id=384900290 instance=ExtResource("21_osnpk")]
+position = Vector2(-245, -6)
+dialogue = ExtResource("22_c6hpv")
+
 [node name="BlackScreen" type="Sprite2D" parent="." unique_id=341669443]
 visible = false
 position = Vector2(-310.5, 106.99999)
@@ -116,6 +133,9 @@ texture = ExtResource("17_v0sf3")
 
 [node name="GameWin" type="Sprite2D" parent="." unique_id=629591657]
 visible = false
+position = Vector2(-0.99998474, -1.9999924)
+scale = Vector2(0.34375003, 0.3472222)
+texture = ExtResource("25_c6hpv")
 
 [node name="Button" type="Button" parent="." unique_id=1268374830]
 visible = false
@@ -129,5 +149,7 @@ theme_override_colors/icon_pressed_color = Color(1, 1, 1, 0)
 theme_override_colors/icon_hover_color = Color(1, 1, 1, 0)
 theme_override_colors/icon_hover_pressed_color = Color(1, 1, 1, 0)
 theme_override_colors/icon_disabled_color = Color(1, 1, 1, 0.4)
+
+[node name="Node" type="Node" parent="." unique_id=1248620259]
 
 [connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

@@ -1,12 +1,10 @@
 ~ start
 set GameState.is_talking = true
 if GameState.current_mask == GameState.Masks.DEFAULT || GameState.current_mask == GameState.Masks.DIPLOMAT:
-	set GameState.current_mask = GameState.Masks.GUARD
 	=> bad_mask
 elif GameState.current_mask == GameState.Masks.COURTESAN || GameState.current_mask == GameState.Masks.ARISTROCRAT:
 	=> good_mask
 else:
-	set GameState.current_mask = GameState.Masks.COURTESAN
 	=> ok_mask
 
 ~ end_chat
@@ -14,7 +12,7 @@ set GameState.is_talking = false
 => END
 
 ~ bad_mask
-Earnest Wubben-Arlington XI: “And who gave you permission to talk to us, peasant? Know your place before I have the guards teach it to you!”
+Earnest Wubben-Arlington XI: And who gave you permission to talk to us, peasant? Know your place before I have the guards teach it to you!
 => end_chat
 
 ~ ok_mask
@@ -35,8 +33,8 @@ Earnest Wubben-Arlington XI: Good evening. We were engaged in conversation far t
 			=> iq_ok
 - Are you enjoying the evening?
 	Earnest Wubben-Arlington XI: The night is just getting started. I do hope it picks up soon.
-	- What do you think of the band?
-		Earnest Wubben-Arlington XI: Dismal. The bass sounds like a screeching carriage wheel, the singer looks like a harlot, and the less said about the Orc the better.
+	- What do you think of the music?
+		Earnest Wubben-Arlington XI: Dismal. The harp sounds like a screeching carriage wheel. I didn't believe that possible.
 		=> iq_ok
 	- What do you think of the food?
 		Earnest Wubben-Arlington XI: These spices are strange. One might think they were poison if the King himself wasn’t eating them. But if they’re good enough for the Courtesans – and it seems that they are – then they’ll have to be good enough for me. Maybe I’ll offer one of them one of these small, bitter cakes.
@@ -49,25 +47,25 @@ Earnest Wubben-Arlington XI: Good evening. We were engaged in conversation far t
 => end_chat
 
 ~ good_mask
-Earnest Wubben-Arlington XI: Well, hello there! Join us! We were just talking about that ghastly orc! I can’t believe they let that thing onto a stage!
+Earnest Wubben-Arlington XI: Well, hello there! Join us! We were just talking about that ghastly music! They'll give any pissant a job here, it seems.
 ~ iq_good
 - Hey! That’s my friend, you pompous cunt!
 	Earnest Wubben-Arlington XI: What? You fiend! You fraud! Give me that mask! If I see you again, I’ll have the guards run you through!
 	set GameState.current_mask = GameState.Masks.DEFAULT
 	=> end_chat
-- It’s a disgusting creature, is it not? Truly grotesque.
-	Earnest Wubben-Arlington XI: They all are. Look at that brute. He looks like he could tear any one of us apart, and they let him remain unchained! And that gnome! Vermin! Petulant, irritating swine who crawl around in the dark fighting each other over the pettiest of grudges! Disgusting! All of them!
+- Music like that should be a crime. You'd think the gnome a traitor to the crown.
+	Earnest Wubben-Arlington XI: Exactly! Glad to know someone here doesn't settle for mere pesantry. Just what is his Majesty thinking?! Besides, since when do gnomes play the harp? Must have been quite difficult to find one his size.
 	~ iq_good_2a
 	- What do you know about gnomes?
-		Earnest Wubben-Arlington XI: Only that they’re vile creatures. There’s a reason that you don’t see many of them. They kill each other over small feuds not worth mentioning. Whether it’s a trinket made of tin or a King’s treasure hoard, they’ll gut you like a fish for the privilege. I hope the King has that bass player domesticated, or he’ll rip us apart for a crumb of cheese.
+		Earnest Wubben-Arlington XI: Well, the history isn't exactly pleasant. There’s a reason that you don’t see many of them. They kill each other over small feuds not worth mentioning by more sensible folk. Whether it’s a trinket made of tin or a King’s treasure hoard, they’ll gut you like a fish for the privilege.
 		=> iq_good_2a
-	- Have you ever seen an orc do that?
-		Earnest Wubben-Arlington XI: Well…no. But look at it!
+	- Do you know how the gnomes harp broke a string?
+		Earnest Wubben-Arlington XI: Wouldn't be surprised if a courtesan cut it to put us all out of our collective misery.
 		=> iq_good_2a
-	- They’re just musicians, aren’t they? What’s the worst they could do?
-		Earnest Wubben-Arlington XI: You mean besides deafening us with their racket? Entertainers can’t be trusted. They’re just the unwashed unemployed with happier faces!
+	- He's just a musician. Part of the scenery.
+		Earnest Wubben-Arlington XI: Entertainers can’t be trusted at the best of times. They’re just the unwashed unemployed with happier faces!
 		=> iq_good_2a
-	- They’re not worth talking about.
+	- It's not worth talking about.
 		Earnest Wubben-Arlington XI: True enough.
 		=> iq_good
 - It’s just staff, like the rest of them.
@@ -81,7 +79,7 @@ Earnest Wubben-Arlington XI: Well, hello there! Join us! We were just talking ab
 	- You'd kill the jester?
 		Earnest Wubben-Arlington XI: And why not? Nobody would miss the swine. I only regret that I’d get his putrid blood on my exquisite outfit. He’s not worth the cleaning bill.
 		=> iq_good
-	- Fuck you, you inbred horsefucker!
+	- In that case, you sir are a rump-fed runion with the face of a toad!
 		Earnest Wubben-Arlington XI: You insolent, fraudulent pig! Give me back that mask and get out of my sight! I hope the King finally sees what a treacherous little wretch you are after this insult!
 		set GameState.current_mask = GameState.Masks.DEFAULT
 		=> end_chat
@@ -90,6 +88,6 @@ Earnest Wubben-Arlington XI: Well, hello there! Join us! We were just talking ab
 	=> iq_good
 - Goodbye
 	Earnest Wubben-Arlington XI: 
-		Don’t stray too far, my friend. The air feels off tonight. Tensions are high, and not just with those filthy foreign freaks.
+		Don’t stray too far, my friend. The air feels off tonight. Tensions are high, and not just with the strange foreigner.
 		
 => end_chat
