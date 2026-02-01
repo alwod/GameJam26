@@ -23,6 +23,7 @@ func _process(delta: float) -> void:
 			pass
 		if mask_name == "Staff":
 			GameState.current_mask = GameState.Masks.STAFF
+		queue_free()
 
 
 func _on_area_2d_body_entered(body: Node2D) -> void:
