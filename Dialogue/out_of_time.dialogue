@@ -1,0 +1,23 @@
+~ start
+set GameState.is_talking = true
+....
+Loner: Too bad, you took too long
+....
+set GameState.display_game_over = true
+=> END
+
+~ wrong_accuse
+set GameState.is_talking = true
+King: That doesn't seem right. Off to the dungeon with you!
+....
+set GameState.display_bad_accuse = true
+=> END
+
+~ correct
+set GameState.is_talking = true
+King: Hmm, very compelling. What say you, spymaster?
+Loner: I saw it all with my very eyes, your majesty. It seems we have a jealous musician on our hands. Such a shame.
+Harp Player: That little shit always steals the spotlight…runs around with those clanking bells…and…and made fun of my hat! They had it coming!!
+set GameState.display_game_win = true
+
+=> END

@@ -1,0 +1,47 @@
+[gd_scene format=3 uid="uid://cxf53k235sl6q"]
+
+[ext_resource type="Script" uid="uid://cfpbwa6vl8dex" path="res://Player/player.gd" id="1_5cwa8"]
+[ext_resource type="SpriteFrames" uid="uid://0er7wv8xict1" path="res://Player/default_sprite_frames.tres" id="2_5cwa8"]
+[ext_resource type="AudioStream" uid="uid://dbxqduj0f08py" path="res://GGJ_Mask_SFX_Bounce/JesterTalking-001.wav" id="3_a5bt4"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_5cwa8"]
+
+[node name="Player" type="CharacterBody2D" unique_id=811081228]
+collision_layer = 3
+collision_mask = 3
+script = ExtResource("1_5cwa8")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=763776817]
+scale = Vector2(1.615, 2.295)
+shape = SubResource("RectangleShape2D_5cwa8")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1478686338]
+sprite_frames = ExtResource("2_5cwa8")
+animation = &"idle_down"
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=483730963]
+ignore_rotation = false
+zoom = Vector2(0.745, 0.745)
+
+[node name="Label" type="Label" parent="Camera2D" unique_id=1016390640]
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = -213.0
+offset_top = -119.0
+offset_right = -86.0
+offset_bottom = -107.0
+grow_vertical = 0
+size_flags_horizontal = 8
+size_flags_vertical = 8
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 8
+text = "TEST"
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="." unique_id=779080964]
+stream = ExtResource("3_a5bt4")
+
+[node name="AudioListener2D" type="AudioListener2D" parent="." unique_id=736545849]
+current = true

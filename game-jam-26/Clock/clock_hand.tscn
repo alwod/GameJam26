@@ -1,7 +1,0 @@
-[gd_scene format=3 uid="uid://bb6u7l7rcd613"]
-
-[ext_resource type="Texture2D" uid="uid://bxa1a8ppy00ec" path="res://Clock/handsolo.png" id="1_vky8h"]
-
-[node name="ClockHand" type="Sprite2D" unique_id=1578186465]
-position = Vector2(0, -6.63)
-texture = ExtResource("1_vky8h")

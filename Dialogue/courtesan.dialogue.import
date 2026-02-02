@@ -1,0 +1,16 @@
+[remap]
+
+importer="dialogue_manager"
+importer_version=15
+type="Resource"
+uid="uid://d2lmhmm452fmd"
+path="res://.godot/imported/courtesan.dialogue-261cef6df7c6d04fb45cc9d0f67ade48.tres"
+
+[deps]
+
+source_file="res://Dialogue/courtesan.dialogue"
+dest_files=["res://.godot/imported/courtesan.dialogue-261cef6df7c6d04fb45cc9d0f67ade48.tres"]
+
+[params]
+
+defaults=true

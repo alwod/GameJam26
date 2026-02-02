@@ -1,0 +1,16 @@
+[remap]
+
+importer="dialogue_manager"
+importer_version=15
+type="Resource"
+uid="uid://brib5v6lhu4pv"
+path="res://.godot/imported/band.dialogue-93e5aea9defc86847063012a9a2e86da.tres"
+
+[deps]
+
+source_file="res://Dialogue/band.dialogue"
+dest_files=["res://.godot/imported/band.dialogue-93e5aea9defc86847063012a9a2e86da.tres"]
+
+[params]
+
+defaults=true

@@ -1,0 +1,44 @@
+~ start
+set GameState.is_talking = true
+Random Guest: Come on, lemme try it on. I've always wanted to be a real fool.
+- Sure
+	=> part2
+- Get Lost
+	=> loop1
+
+~ loop1
+% Random Guest: Oh come on, what have you got to lose?
+% Random Guest: Pretty please?
+- Ok fine...
+	=> part2
+- Nope
+	=> loop1
+
+~ part2
+Random Guest: Yes! Here, take mine.
+set GameState.current_mask = GameState.Masks.DEFAULT
+set GameState.victim_gave_mask = true
+Random Guest: Hehe, oh the shenanigans I could cause with this!
+
+~ part3
+You: What an absolute cumberworld, they've no idea just how much effort, charisma, and pure panache goes into being the King's favorite jester.
+You: I could be, in fact, the only person with any substance in this ballroom.
+# Murder event, lights go out, sound cuts
+set GameState.intro_lights_out = true
+What's happening? Oh my word. Eh?
+ 
+# Another event here, lights turn on
+set GameState.intro_lights_on = true
+You: A murder? Here? How gauche.
+
+King: What's the meaning of this?!
+Gaurd: My grace! The victim appears to be a lesser duke.
+King: Oh. Well in that case, carry on.
+# Resume music and start game.
+set GameState.intro_resume_music
+You: That man was murdered while wearing my mask. What if the true target was meant to be me? The killer would know now that he's failed...
+You: I must look into this before they strike again. After all, I am the most competent fool at this ball.
+You: I may not have much time...
+set GameState.start_game = true
+set GameState.is_talking = false
+=> END

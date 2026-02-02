@@ -1,0 +1,43 @@
+~ start
+set GameState.is_talking = true
+=> ok_mask
+
+~ end_title
+set GameState.is_talking = false
+=> END
+
+~ bad_mask
+=> end_title
+
+~ ok_mask
+Gimble: Hey! How’s the set sounding? You look well!
+~ iq_ok
+- You sound great tonight!
+	Gimble: Cheers! It’s been a good night so far! Hopefully it’ll get even better! Been working on some new music! New as I can muster with but my trusty harp.
+	You: You seen anything untoward tonight? Perfect vantage point!
+	Gimble: Well, everyone's favourite Jester hasn’t been very entertaining tonight! Losing ya touch?
+	- Kind of hard to be a silly little guy when someone's trying to kill me!
+		Gimble: Kill you? You’re the King’s favourite performer! Why would anyone want to hurt you of all people?
+		- I don’t know! I’m perfect!
+			Gimble: Still not lacking in confidence, are you? Must’ve rubbed someone the wrong way.
+			=> iq_ok
+		- Do you know who it could be?
+			Gimble: If I had to guess, I’d put money on that new diplomat. I bet they don’t even have jesters where he comes from! It’s probably some weird foreign insult to him.!
+			=> iq_ok
+	- Me? Never! That’s why I’m the main event now! We save the best for last in this court!
+		Gimble: Yeah. We sure do…
+		=> iq_ok
+- What’s the plan for after the night’s over? Pub as usual?
+	Gimble: I dunno, mate. I don’t think I’m really feeling it. I'd love to, but I don’t think I can and… yeah.
+	- Leaving me to dry? You dried newt!
+		Gimble: Three-inch fool
+		=> iq_ok
+	- Pigeon-liver’d loser!
+		Gimble: Can't be that bad if you still have so many insults, eh? Have a drink for me tonight.
+		=> iq_ok
+- Goodbye!
+	Gimble: See you around, mate!
+	=> end_title
+
+
+~ good_mask

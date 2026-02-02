@@ -1,0 +1,16 @@
+[remap]
+
+importer="dialogue_manager"
+importer_version=15
+type="Resource"
+uid="uid://ct2fqp4mfubtq"
+path="res://.godot/imported/loner.dialogue-ea45179ab55c5ed344520fbcc55c396e.tres"
+
+[deps]
+
+source_file="res://Dialogue/loner.dialogue"
+dest_files=["res://.godot/imported/loner.dialogue-ea45179ab55c5ed344520fbcc55c396e.tres"]
+
+[params]
+
+defaults=true

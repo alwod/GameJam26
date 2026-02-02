@@ -1,0 +1,218 @@
+[gd_scene format=3 uid="uid://dgbj413cqgwic"]
+
+[ext_resource type="Script" uid="uid://dbvlcmlen0p8d" path="res://World/intro_scene.gd" id="1_r8ji3"]
+[ext_resource type="Texture2D" uid="uid://bsqxbgbghtp7i" path="res://World/Floor_extended.png" id="2_csqqw"]
+[ext_resource type="PackedScene" uid="uid://os60yw6xpb8m" path="res://World/test_wall.tscn" id="2_jj51w"]
+[ext_resource type="PackedScene" uid="uid://cxf53k235sl6q" path="res://Player/player_character.tscn" id="3_qdmss"]
+[ext_resource type="PackedScene" uid="uid://0orgm35pkg8e" path="res://NPCs/Diplomat/diplomat.tscn" id="4_1h5m6"]
+[ext_resource type="PackedScene" uid="uid://bhevcq3qo3ms0" path="res://Clock/clock.tscn" id="5_3ovin"]
+[ext_resource type="PackedScene" uid="uid://5mwan631l2hv" path="res://NPCs/Victim/victim.tscn" id="5_4g07b"]
+[ext_resource type="Texture2D" uid="uid://bqtgdrtlicnrx" path="res://World/Throne.png" id="5_601mo"]
+[ext_resource type="PackedScene" uid="uid://bd7qecn0uk8dw" path="res://NPCs/King/king.tscn" id="6_1u0sp"]
+[ext_resource type="Texture2D" uid="uid://d0r8uki0odnco" path="res://World/window.png" id="6_nnl7d"]
+[ext_resource type="Resource" uid="uid://dd7y5ueb4ysnb" path="res://Dialogue/victim.dialogue" id="6_vi51s"]
+[ext_resource type="PackedScene" uid="uid://dn0p5c6aoptts" path="res://NPCs/Aristrocrat/aristo.tscn" id="7_csqqw"]
+[ext_resource type="Resource" uid="uid://dwbia3o8twcki" path="res://Dialogue/aristocrat.dialogue" id="8_e1x5k"]
+[ext_resource type="PackedScene" uid="uid://bv33xxfpfpht2" path="res://NPCs/Loner/loner.tscn" id="8_qofjf"]
+[ext_resource type="PackedScene" uid="uid://rgbcb7wlqaw2" path="res://NPCs/Guard/guard.tscn" id="10_l6ukf"]
+[ext_resource type="Resource" uid="uid://ct2fqp4mfubtq" path="res://Dialogue/loner.dialogue" id="10_vi51s"]
+[ext_resource type="Resource" uid="uid://8gebwlqmgvsm" path="res://Dialogue/diplomat.dialogue" id="12_v0sf3"]
+[ext_resource type="Resource" uid="uid://cwrslp7nqf1nf" path="res://Dialogue/guard.dialogue" id="14_bpi65"]
+[ext_resource type="Texture2D" uid="uid://c7kwfgo68r5l2" path="res://World/Jail_Ending.png" id="17_bpi65"]
+[ext_resource type="Texture2D" uid="uid://cmy62ejnebshb" path="res://World/Untitled_Artwork 3.png" id="17_v0sf3"]
+[ext_resource type="Resource" uid="uid://brib5v6lhu4pv" path="res://Dialogue/band.dialogue" id="18_hyj8d"]
+[ext_resource type="PackedScene" uid="uid://c6drnlvege1dv" path="res://NPCs/Band/band.tscn" id="19_o1l8h"]
+[ext_resource type="PackedScene" uid="uid://loryqrcp5m6k" path="res://NPCs/Courtesan/Courtesan.tscn" id="19_rw3q0"]
+[ext_resource type="Resource" uid="uid://d2lmhmm452fmd" path="res://Dialogue/courtesan.dialogue" id="20_moeg8"]
+[ext_resource type="PackedScene" uid="uid://c3nolkjfhnl6r" path="res://NPCs/Staff/staff.tscn" id="21_osnpk"]
+[ext_resource type="Resource" uid="uid://derd8sh4m5c8n" path="res://Dialogue/staff.dialogue" id="22_c6hpv"]
+[ext_resource type="Texture2D" uid="uid://rw475amla03h" path="res://World/Win_end screen.png" id="25_c6hpv"]
+[ext_resource type="Texture2D" uid="uid://c88d0jo3tv0io" path="res://World/Untitled_Artwork.png" id="27_a2sxg"]
+[ext_resource type="PackedScene" path="res://NPCs/aristo_mask.tscn" id="28_h6ak2"]
+[ext_resource type="PackedScene" path="res://NPCs/courtesan_mask.tscn" id="29_b7jps"]
+[ext_resource type="PackedScene" path="res://NPCs/diplomat_mask.tscn" id="30_t5w3c"]
+[ext_resource type="PackedScene" path="res://NPCs/guard_mask.tscn" id="31_nnl7d"]
+[ext_resource type="AudioStream" uid="uid://c02pptaxp70ga" path="res://GGJ_Mask_Music/Music_Background1.ogg" id="32_b7jps"]
+[ext_resource type="AudioStream" uid="uid://x2xetgbhsg4i" path="res://GGJ_Mask_Music/Music_GameOverSoon_Harpsichord.wav" id="33_t5w3c"]
+
+[sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_csqqw"]
+size = Vector2(30, 1)
+
+[node name="IntroScene" type="Node2D" unique_id=213701460]
+script = ExtResource("1_r8ji3")
+
+[node name="Background" type="Node2D" parent="." unique_id=563993020]
+
+[node name="BackgroundSprite" type="Sprite2D" parent="Background" unique_id=482349721]
+texture = ExtResource("2_csqqw")
+
+[node name="Walls" type="Node2D" parent="Background" unique_id=639258923]
+
+[node name="TestWall" parent="Background/Walls" unique_id=1440774293 instance=ExtResource("2_jj51w")]
+position = Vector2(-304.99997, 1)
+scale = Vector2(1.455, 18.08)
+
+[node name="TestWall2" parent="Background/Walls" unique_id=555399909 instance=ExtResource("2_jj51w")]
+position = Vector2(0, 169)
+scale = Vector2(29.03, 1)
+
+[node name="TestWall3" parent="Background/Walls" unique_id=662260389 instance=ExtResource("2_jj51w")]
+position = Vector2(0, -168)
+scale = Vector2(29, 1.27)
+
+[node name="TestWall4" parent="Background/Walls" unique_id=909555317 instance=ExtResource("2_jj51w")]
+position = Vector2(306, 0)
+scale = Vector2(1.485, 18.19)
+
+[node name="Clock" parent="Background" unique_id=741243204 instance=ExtResource("5_3ovin")]
+position = Vector2(-133, -190.00002)
+scale = Vector2(0.54, 0.54)
+starting_time = 300.0
+
+[node name="Throne" type="Sprite2D" parent="Background" unique_id=2008695285]
+position = Vector2(2, -186)
+texture = ExtResource("5_601mo")
+
+[node name="Window" type="Sprite2D" parent="Background" unique_id=1210227785]
+position = Vector2(-72, -225.00002)
+scale = Vector2(1, 0.89428574)
+texture = ExtResource("6_nnl7d")
+
+[node name="Window5" type="Sprite2D" parent="Background/Window" unique_id=102790687]
+position = Vector2(329.62497, -23.272736)
+scale = Vector2(0.72326195, 0.59025544)
+texture = ExtResource("6_nnl7d")
+
+[node name="Window6" type="Sprite2D" parent="Background/Window" unique_id=1027206045]
+position = Vector2(251.125, -23.482422)
+scale = Vector2(0.683155, 0.5990415)
+texture = ExtResource("6_nnl7d")
+
+[node name="Window" type="Sprite2D" parent="Background/Window" unique_id=845584434]
+position = Vector2(-72, -225.00002)
+scale = Vector2(1, 0.89428574)
+texture = ExtResource("6_nnl7d")
+
+[node name="Window2" type="Sprite2D" parent="Background/Window" unique_id=182273004]
+position = Vector2(136, 1.118227)
+texture = ExtResource("6_nnl7d")
+
+[node name="Window3" type="Sprite2D" parent="Background/Window" unique_id=422680135]
+position = Vector2(-120.99999, -22.364197)
+scale = Vector2(0.66577536, 0.59744406)
+texture = ExtResource("6_nnl7d")
+
+[node name="Window4" type="Sprite2D" parent="Background/Window" unique_id=694414697]
+position = Vector2(-197.99997, -22.364197)
+scale = Vector2(0.6711229, 0.58466446)
+texture = ExtResource("6_nnl7d")
+
+[node name="UntitledArtwork" type="Sprite2D" parent="Background" unique_id=622444747]
+position = Vector2(198, -161)
+texture = ExtResource("27_a2sxg")
+
+[node name="AristoMask" parent="Background" unique_id=1357302958 instance=ExtResource("28_h6ak2")]
+position = Vector2(151, -118)
+
+[node name="CourteMask" parent="Background" unique_id=1872287740 instance=ExtResource("29_b7jps")]
+position = Vector2(164, -23)
+
+[node name="DiploMask" parent="Background" unique_id=1149344588 instance=ExtResource("30_t5w3c")]
+position = Vector2(54, 16)
+
+[node name="DiploMask2" parent="Background" unique_id=1050466326 instance=ExtResource("31_nnl7d")]
+position = Vector2(-86, 32)
+
+[node name="Characters" type="Node2D" parent="." unique_id=1495838367]
+
+[node name="Victim" parent="Characters" unique_id=886347027 instance=ExtResource("5_4g07b")]
+position = Vector2(-80, -81)
+dialogue = ExtResource("6_vi51s")
+
+[node name="King" parent="Characters" unique_id=436551178 instance=ExtResource("6_1u0sp")]
+position = Vector2(5, -146)
+
+[node name="Aristo" parent="Characters" unique_id=831314489 instance=ExtResource("7_csqqw")]
+position = Vector2(194, 66)
+dialogue = ExtResource("8_e1x5k")
+
+[node name="Loner" parent="Characters" unique_id=1714132578 instance=ExtResource("8_qofjf")]
+position = Vector2(-262, -117)
+npc_name = "Loner"
+dialogue = ExtResource("10_vi51s")
+
+[node name="Diplomat" parent="Characters" unique_id=41319422 instance=ExtResource("4_1h5m6")]
+position = Vector2(239, -69)
+dialogue = ExtResource("12_v0sf3")
+
+[node name="Guard" parent="Characters" unique_id=2086176646 instance=ExtResource("10_l6ukf")]
+position = Vector2(-31, 123)
+dialogue = ExtResource("14_bpi65")
+
+[node name="Player" parent="Characters" unique_id=811081228 instance=ExtResource("3_qdmss")]
+position = Vector2(33, -60)
+speed = 200.0
+
+[node name="Band" parent="Characters" unique_id=1005610093 instance=ExtResource("19_o1l8h")]
+position = Vector2(-196, 94)
+dialogue = ExtResource("18_hyj8d")
+is_evil = true
+
+[node name="Courtesan" parent="Characters" unique_id=762064746 instance=ExtResource("19_rw3q0")]
+position = Vector2(87, 99)
+dialogue = ExtResource("20_moeg8")
+
+[node name="Staff" parent="Characters" unique_id=384900290 instance=ExtResource("21_osnpk")]
+position = Vector2(-245, -6)
+dialogue = ExtResource("22_c6hpv")
+
+[node name="BlackScreen" type="Sprite2D" parent="." unique_id=341669443]
+visible = false
+position = Vector2(-310.5, 106.99999)
+scale = Vector2(49.966667, 787.9999)
+texture = SubResource("PlaceholderTexture2D_csqqw")
+
+[node name="GameOver1" type="Sprite2D" parent="." unique_id=2032125832]
+visible = false
+position = Vector2(-1, 1)
+scale = Vector2(0.334375, 0.33611113)
+texture = ExtResource("17_bpi65")
+
+[node name="GameOver2" type="Sprite2D" parent="." unique_id=1617341642]
+visible = false
+position = Vector2(-0.499997, 1.0000025)
+scale = Vector2(0.3382812, 0.34444445)
+texture = ExtResource("17_v0sf3")
+
+[node name="GameWin" type="Sprite2D" parent="." unique_id=629591657]
+visible = false
+position = Vector2(-0.99998474, -1.9999924)
+scale = Vector2(0.34375003, 0.3472222)
+texture = ExtResource("25_c6hpv")
+
+[node name="Button" type="Button" parent="." unique_id=1268374830]
+visible = false
+offset_left = -201.0
+offset_top = 40.0
+offset_right = -44.0
+offset_bottom = 86.0
+theme_override_colors/icon_normal_color = Color(1, 1, 1, 0)
+theme_override_colors/icon_focus_color = Color(1, 1, 1, 0)
+theme_override_colors/icon_pressed_color = Color(1, 1, 1, 0)
+theme_override_colors/icon_hover_color = Color(1, 1, 1, 0)
+theme_override_colors/icon_hover_pressed_color = Color(1, 1, 1, 0)
+theme_override_colors/icon_disabled_color = Color(1, 1, 1, 0.4)
+
+[node name="Node" type="Node" parent="." unique_id=1248620259]
+
+[node name="audio_BGM" type="AudioStreamPlayer2D" parent="." unique_id=1613795267]
+stream = ExtResource("32_b7jps")
+
+[node name="audio_IntroEvents" type="AudioStreamPlayer2D" parent="." unique_id=524528265]
+
+[node name="audio_clock" type="AudioStreamPlayer2D" parent="." unique_id=670626001]
+stream = ExtResource("33_t5w3c")
+
+[node name="audio_mask" type="AudioStreamPlayer2D" parent="." unique_id=2119037986]
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

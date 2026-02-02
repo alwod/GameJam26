@@ -1,0 +1,40 @@
+~ start
+set GameState.is_talking = true
+King: He was only a duke but a murder in my ballroom still vexes me, jester mine.
+You: Allow me to lift your spirits, my king.
+King: No. Unless you know who did it, leave me be.
+King: And you better not accuse the wrong party, lest I throw you in in the dungeon myself for offending a guest.
+- Accuse
+	=> accuse
+- Nevermind...
+set GameState.is_talking = false
+	=> END
+	
+~ accuse
+King: So, who dunnit?
+- The Aristocrat
+	set GameState.event_bad_accuse = true
+	=> END
+- The Musician
+	set GameState.event_game_win = true
+	=> END
+- The Courtesan
+	set GameState.event_bad_accuse = true
+	=> END
+- The Diplomat
+	set GameState.event_bad_accuse = true
+	=> END
+- The Guard
+	set GameState.event_bad_accuse = true
+	=> END
+- The Loner
+	set GameState.event_bad_accuse = true
+	=> END
+- The Wait Staff
+	set GameState.event_bad_accuse = true
+	=> END
+- D-did... I do it?
+	Of course not, idiot.
+	=> accuse
+	
+=> END

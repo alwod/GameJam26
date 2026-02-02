@@ -1,0 +1,22 @@
+[gd_scene format=3 uid="uid://ceblb3nqtyh1b"]
+
+[ext_resource type="Script" uid="uid://ge0gm03qu4hy" path="res://NPCs/mask.gd" id="1_542oo"]
+[ext_resource type="Texture2D" uid="uid://yphchkcs6fbf" path="res://NPCs/Masks Solo Sprites/guard mask solo.png" id="2_542oo"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_rfk6w"]
+
+[node name="DiploMask" type="Node2D" unique_id=1357302958]
+script = ExtResource("1_542oo")
+mask_name = "Guard"
+
+[node name="Area2D" type="Area2D" parent="." unique_id=142769660]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1770566557]
+scale = Vector2(2.805, 2.805)
+shape = SubResource("CircleShape2D_rfk6w")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1163160099]
+texture = ExtResource("2_542oo")
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
+[connection signal="body_exited" from="Area2D" to="." method="_on_area_2d_body_exited"]

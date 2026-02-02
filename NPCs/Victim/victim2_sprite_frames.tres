@@ -1,0 +1,14 @@
+[gd_resource type="SpriteFrames" format=3 uid="uid://drdyyo17xkupq"]
+
+[ext_resource type="Texture2D" uid="uid://boetwkssl408f" path="res://NPCs/Victim/victim_idle.png" id="1_xuhjg"]
+
+[resource]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_xuhjg")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
