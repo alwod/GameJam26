@@ -28,12 +28,10 @@
 [ext_resource type="Resource" uid="uid://derd8sh4m5c8n" path="res://Dialogue/staff.dialogue" id="22_c6hpv"]
 [ext_resource type="Texture2D" uid="uid://rw475amla03h" path="res://World/Win_end screen.png" id="25_c6hpv"]
 [ext_resource type="Texture2D" uid="uid://c88d0jo3tv0io" path="res://World/Untitled_Artwork.png" id="27_a2sxg"]
-[ext_resource type="PackedScene" path="res://NPCs/aristo_mask.tscn" id="28_h6ak2"]
-[ext_resource type="PackedScene" path="res://NPCs/courtesan_mask.tscn" id="29_b7jps"]
-[ext_resource type="PackedScene" path="res://NPCs/diplomat_mask.tscn" id="30_t5w3c"]
-[ext_resource type="PackedScene" path="res://NPCs/guard_mask.tscn" id="31_nnl7d"]
-[ext_resource type="AudioStream" uid="uid://c02pptaxp70ga" path="res://GGJ_Mask_Music/Music_Background1.ogg" id="32_b7jps"]
-[ext_resource type="AudioStream" uid="uid://x2xetgbhsg4i" path="res://GGJ_Mask_Music/Music_GameOverSoon_Harpsichord.wav" id="33_t5w3c"]
+[ext_resource type="PackedScene" uid="uid://bfy0v6w26y88f" path="res://NPCs/aristo_mask.tscn" id="28_h6ak2"]
+[ext_resource type="PackedScene" uid="uid://b6itqmdb30u57" path="res://NPCs/courtesan_mask.tscn" id="29_b7jps"]
+[ext_resource type="PackedScene" uid="uid://5xjbp1d87woc" path="res://NPCs/diplomat_mask.tscn" id="30_t5w3c"]
+[ext_resource type="PackedScene" uid="uid://ceblb3nqtyh1b" path="res://NPCs/guard_mask.tscn" id="31_nnl7d"]
 
 [sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_csqqw"]
 size = Vector2(30, 1)
@@ -204,15 +202,5 @@ theme_override_colors/icon_hover_pressed_color = Color(1, 1, 1, 0)
 theme_override_colors/icon_disabled_color = Color(1, 1, 1, 0.4)
 
 [node name="Node" type="Node" parent="." unique_id=1248620259]
-
-[node name="audio_BGM" type="AudioStreamPlayer2D" parent="." unique_id=1613795267]
-stream = ExtResource("32_b7jps")
-
-[node name="audio_IntroEvents" type="AudioStreamPlayer2D" parent="." unique_id=524528265]
-
-[node name="audio_clock" type="AudioStreamPlayer2D" parent="." unique_id=670626001]
-stream = ExtResource("33_t5w3c")
-
-[node name="audio_mask" type="AudioStreamPlayer2D" parent="." unique_id=2119037986]
 
 [connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

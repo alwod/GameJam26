@@ -54,3 +54,8 @@ func create_audio(type: SoundEffect.SOUND_EFFECT_TYPE) -> void:
 			new_audio.play()
 	else:
 		push_error("Audio Manager failed to find setting for type ", type)
+		
+func stop_audio() -> void:
+	for audio_node in get_children():
+		audio_node.queue_free()
+			

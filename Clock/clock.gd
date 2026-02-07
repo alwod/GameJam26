@@ -3,7 +3,6 @@ extends Node2D
 @onready var hand_anchor: Node2D = $HandAnchor
 @onready var timer: Timer = $Timer
 @export var starting_time : float
-@onready var audio_clock: AudioStreamPlayer2D = $"../../audio_clock"
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
@@ -20,11 +19,12 @@ func rotate_hand():
 	var time_left_percentage = (timer.time_left / starting_time) * 360
 	#print(time_left_percentage)
 	
-	if timer.time_left == 25:
-		audio_clock.play()
+	if int(timer.time_left) % 60 == 0:
+		AudioManager.create_audio(SoundEffect.SOUND_EFFECT_TYPE.CLOCK)
 	
 	# Then, rotate the hand by that percentage ammount
 	hand_anchor.rotation_degrees = -time_left_percentage
+	print("Time Left:", timer.time_left, " As a percentage: ", time_left_percentage)
 
 func _on_timer_timeout() -> void:
 	print("Game Ended")
