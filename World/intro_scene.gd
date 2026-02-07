@@ -14,7 +14,8 @@ extends Node2D
 
 
 
-var scene = preload("res://World/hacky_intermediate_scene.tscn").instantiate()
+#var scene = preload("res://World/hacky_intermediate_scene.tscn").instantiate()
+const SCENE = preload("res://World/intro_scene.tscn")
 
 const BALOON = preload("res://Dialogue/balloon.tscn")
 
@@ -133,7 +134,7 @@ func display_good_ending() -> void:
 
 func _on_button_pressed() -> void:
 	if (button.visible):
-		get_tree().change_scene_to_file("res://World/hacky_intermediate_scene.tscn")
+		get_tree().change_scene_to_packed(SCENE)
 
 func play_mask_sound(sound : AudioStream):
 	audio_mask.stream = sound

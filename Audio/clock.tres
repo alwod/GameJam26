@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="SoundEffect" format=3 uid="uid://dd08j3iwlwykc"]
+
+[ext_resource type="Script" uid="uid://bqrvic7c57n36" path="res://Audio/sound_effect_setting.gd" id="1_5ylsl"]
+[ext_resource type="AudioStream" uid="uid://br1m3u5rlw6t7" path="res://GGJ_Mask_SFX_Bounce/Clock_Strike.ogg" id="2_5qo5c"]
+
+[resource]
+script = ExtResource("1_5ylsl")
+type = 7
+sound_effect = ExtResource("2_5qo5c")
+metadata/_custom_type_script = "uid://bqrvic7c57n36"

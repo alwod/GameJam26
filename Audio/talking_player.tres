@@ -1,0 +1,19 @@
+[gd_resource type="Resource" script_class="SoundEffect" format=3 uid="uid://cuwk0eag55mbt"]
+
+[ext_resource type="Script" uid="uid://bqrvic7c57n36" path="res://Audio/sound_effect_setting.gd" id="1_xga8s"]
+[ext_resource type="AudioStream" uid="uid://dbxqduj0f08py" path="res://GGJ_Mask_SFX_Bounce/JesterTalking-001.wav" id="2_nnc0d"]
+[ext_resource type="AudioStream" uid="uid://chijjxacrl3u7" path="res://GGJ_Mask_SFX_Bounce/JesterTalking-002.wav" id="3_h6ix4"]
+[ext_resource type="AudioStream" uid="uid://d3ba2l0yitfbc" path="res://GGJ_Mask_SFX_Bounce/JesterTalking-003.wav" id="4_ql47b"]
+
+[sub_resource type="AudioStreamPlaylist" id="AudioStreamPlaylist_4v31o"]
+shuffle = true
+stream_count = 3
+stream_0 = ExtResource("2_nnc0d")
+stream_1 = ExtResource("3_h6ix4")
+stream_2 = ExtResource("4_ql47b")
+
+[resource]
+script = ExtResource("1_xga8s")
+type = 6
+sound_effect = SubResource("AudioStreamPlaylist_4v31o")
+metadata/_custom_type_script = "uid://bqrvic7c57n36"

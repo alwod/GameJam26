@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="SoundEffect" format=3 uid="uid://bjgvfhvbe26c5"]
+
+[ext_resource type="Script" uid="uid://bqrvic7c57n36" path="res://Audio/sound_effect_setting.gd" id="1_vba65"]
+[ext_resource type="AudioStream" uid="uid://bn76veb21rh8o" path="res://GGJ_Mask_SFX_Bounce/CorrectMask.wav" id="2_umaae"]
+
+[resource]
+script = ExtResource("1_vba65")
+sound_effect = ExtResource("2_umaae")
+metadata/_custom_type_script = "uid://bqrvic7c57n36"
