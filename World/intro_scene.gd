@@ -20,6 +20,7 @@ const BALOON = preload("res://Dialogue/balloon.tscn")
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
+	GameState.victim_gave_mask = false
 	var baloon: Node = BALOON.instantiate()
 	get_tree().current_scene.add_child(baloon)
 	baloon.start(load("res://Dialogue/intro.dialogue"), "start")
