@@ -11,6 +11,7 @@ func _ready() -> void:
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
 	if Input.is_action_pressed("Interact") && can_pick_up:
+		AudioManager.create_2d_audio_at_location(position, SoundEffect.SOUND_EFFECT_TYPE.PICKUP)
 		if mask_name == "Aristocrat":
 			GameState.current_mask = GameState.Masks.ARISTROCRAT
 		if mask_name == "Courtesan":
