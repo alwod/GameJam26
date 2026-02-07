@@ -55,7 +55,13 @@ func create_audio(type: SoundEffect.SOUND_EFFECT_TYPE) -> void:
 	else:
 		push_error("Audio Manager failed to find setting for type ", type)
 		
-func stop_audio() -> void:
+func stop_all_audio() -> void:
 	for audio_node in get_children():
 		audio_node.queue_free()
-			
+
+func stop_audio(type: SoundEffect.SOUND_EFFECT_TYPE) -> void:
+	var sound_effect: SoundEffect = sound_effect_dict[type]
+	for audio_node : AudioStreamPlayer in get_children():
+		if audio_node.stream == sound_effect.sound_effect:
+			print("Stopped ", type)
+			audio_node.queue_free()

@@ -30,6 +30,7 @@ func _process(delta: float) -> void:
 		animated_sprite_2d.sprite_frames = load("res://NPCs/Victim/victim2_sprite_frames.tres")
 
 func _on_body_entered(body: Node2D) -> void:
+	AudioManager.create_2d_audio_at_location(position, SoundEffect.SOUND_EFFECT_TYPE.INTERACT)
 	can_talk = true
 	
 

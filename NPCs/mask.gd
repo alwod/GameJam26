@@ -28,6 +28,7 @@ func _process(delta: float) -> void:
 
 
 func _on_area_2d_body_entered(body: Node2D) -> void:
+	AudioManager.create_2d_audio_at_location(position, SoundEffect.SOUND_EFFECT_TYPE.INTERACT)
 	can_pick_up = true
 
 

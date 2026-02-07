@@ -23,7 +23,7 @@ func rotate_hand():
 	
 	# Then, rotate the hand by that percentage ammount
 	hand_anchor.rotation_degrees = -time_left_percentage
-	#print("Time Left:", timer.time_left, " As a percentage: ", time_left_percentage)
+	#print("Time Left:", int(timer.time_left), " As a percentage: ", int(time_left_percentage))
 
 func _on_timer_timeout() -> void:
 	print("Game Ended")

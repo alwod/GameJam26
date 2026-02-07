@@ -21,8 +21,10 @@ set GameState.victim_gave_mask = true
 Random Guest: Hehe, oh the shenanigans I could cause with this!
 
 ~ part3
+set AudioManager.create_audio(SoundEffect.SOUND_EFFECT_TYPE.TALKING_PLAYER)
 You: What an absolute cumberworld, they've no idea just how much effort, charisma, and pure panache goes into being the King's favorite jester.
 You: I could be, in fact, the only person with any substance in this ballroom.
+set AudioManager.stop_audio(SoundEffect.SOUND_EFFECT_TYPE.TALKING_PLAYER)
 # Murder event, lights go out, sound cuts
 set GameState.intro_lights_out = true
 What's happening? Oh my word. Eh?

@@ -13,5 +13,5 @@ func _process(delta: float) -> void:
 
 
 func _on_button_pressed() -> void:
-	AudioManager.stop_audio()
+	AudioManager.stop_all_audio()
 	get_tree().change_scene_to_packed(SCENE)
