@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="SoundEffect" format=3 uid="uid://byeggill6dmn8"]
+
+[ext_resource type="Script" uid="uid://bqrvic7c57n36" path="res://Audio/sound_effect_setting.gd" id="1_6yetk"]
+[ext_resource type="AudioStream" uid="uid://c02pptaxp70ga" path="res://GGJ_Mask_Music/Music_Background1.ogg" id="2_t1hjc"]
+
+[resource]
+script = ExtResource("1_6yetk")
+type = 11
+sound_effect = ExtResource("2_t1hjc")
+metadata/_custom_type_script = "uid://bqrvic7c57n36"

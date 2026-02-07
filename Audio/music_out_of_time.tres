@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="SoundEffect" format=3 uid="uid://bl0wtisu27g2m"]
+
+[ext_resource type="Script" uid="uid://bqrvic7c57n36" path="res://Audio/sound_effect_setting.gd" id="1_nynnl"]
+[ext_resource type="AudioStream" uid="uid://dk5cruxcpm8ca" path="res://GGJ_Mask_SFX_Bounce/Death_OutOfTime.wav" id="2_nynnl"]
+
+[resource]
+script = ExtResource("1_nynnl")
+type = 13
+sound_effect = ExtResource("2_nynnl")
+metadata/_custom_type_script = "uid://bqrvic7c57n36"

@@ -19,7 +19,6 @@ config/icon="res://icon.svg"
 
 DialogueManager="*uid://c3rodes2l3gxb"
 GameState="*uid://wl48issvgerx"
-EventManager="*uid://5l2nrwaoveuh"
 
 [dialogue_manager]
 

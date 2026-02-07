@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="SoundEffect" format=3 uid="uid://c568ns62n68m7"]
+
+[ext_resource type="Script" uid="uid://bqrvic7c57n36" path="res://Audio/sound_effect_setting.gd" id="1_tg26c"]
+[ext_resource type="AudioStream" uid="uid://b4ap3xopa02or" path="res://GGJ_Mask_SFX_Bounce/LightsOff.wav" id="2_apco7"]
+
+[resource]
+script = ExtResource("1_tg26c")
+type = 8
+sound_effect = ExtResource("2_apco7")
+metadata/_custom_type_script = "uid://bqrvic7c57n36"

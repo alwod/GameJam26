@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="SoundEffect" format=3 uid="uid://dhimq8eo1fhbj"]
+
+[ext_resource type="Script" uid="uid://bqrvic7c57n36" path="res://Audio/sound_effect_setting.gd" id="1_hokk5"]
+[ext_resource type="AudioStream" uid="uid://x2xetgbhsg4i" path="res://GGJ_Mask_Music/Music_GameOverSoon_Harpsichord.wav" id="2_hokk5"]
+
+[resource]
+script = ExtResource("1_hokk5")
+type = 14
+sound_effect = ExtResource("2_hokk5")
+metadata/_custom_type_script = "uid://bqrvic7c57n36"
